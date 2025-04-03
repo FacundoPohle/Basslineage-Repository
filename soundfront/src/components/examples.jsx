@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import playIcon from "../assets/play.svg";
 import pauseIcon from "../assets/pause.svg";
 
-const AudioPlayer = ({ src, title, name }) => {
+const AudioPlayer = ({ src, title, name, sello }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -65,7 +65,7 @@ const AudioPlayer = ({ src, title, name }) => {
               <div className="know">{title}</div>
               <div className="d-flex flex-row">
                 <div className="pe-2 bordeder">{name}</div>
-                <div className="ps-2 bordersello">Sello</div>
+                <div className="ps-2 bordersello">{sello}</div>
               </div>
 
               {/* Barra de progreso debajo del nombre y sello */}
@@ -107,9 +107,9 @@ const AudioPlayer = ({ src, title, name }) => {
 
 const ExamplesCards = () => {
   const songs = [
-    { src: "/LUCY-V3.mp3", title: "V3", name:"LUCY" },
-    { src: "/Daphna-22.mp3", title: "22 [One Of Those Days]", name:"Daphna" },
-    { src: "/Firebass-JumpIn.wav", title: "Jump In (Original Mix)", name:"Firebass" }
+    { src: "/LUCY-V3.mp3", title: "V3", name:"LUCY", sello:"Unrealesed"},
+    { src: "/Daphna-22.mp3", title: "22", name:"Daphna", sello:"One Of Those Days" },
+    { src: "/Firebass-JumpIn.wav", title: "Jump In (Original Mix)", name:"Firebass", sello:"My Planet Record" }
   ];
 
   return (
@@ -120,7 +120,7 @@ const ExamplesCards = () => {
         </div>
       </div>
       {songs.map((song, index) => (
-        <AudioPlayer key={index} src={song.src} name={song.name} title={song.title}/>
+        <AudioPlayer key={index} src={song.src} name={song.name} title={song.title} sello={song.sello}/>
       ))}
     </div>
   );
