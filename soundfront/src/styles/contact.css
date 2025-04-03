@@ -1,0 +1,274 @@
+.whatsapp_link {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Mantiene el color original del icono */
+    display: inline-block; /* Asegura que el contenedor respete el tamaño del ícono */
+}
+
+.contact_input{
+    border: #d10359 2px solid;
+    background-color: black;
+    color: white;
+}
+
+.contact_input::after, .contact_input::before, .contact_input:focus, .contact_input::placeholder{
+    background-color: black;
+    color: white;
+}
+
+
+.contact_message{
+    border-radius: 20px;
+    height: 8rem;
+}
+
+
+
+
+.contact_title::after{
+    
+    content: '';
+    display: flex;
+    position: absolute;
+    left: 40%;
+    margin-top: 1rem;
+    transform: translateX(-50%);
+    width: 70%; /* Width of the border */
+    border-bottom: 2px solid #d10359; /* Border properties */
+        
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {
+    .contact_container{
+        background-image: url("../img/littlepiano.jpg");
+        background-size: cover;
+        background-position:50% -20rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .contact_form_col{
+        width: 100%;
+    }
+    .contact_form{
+        background-color: rgba(5, 5, 27, 0.7) ;
+        margin-top: 2rem;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+    .submit_contact, .submit_contact:after, .submit_contact:hover{
+        background-color: #d10359;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    
+    
+    .submit_col{
+        display: flex;
+        margin-top: 3rem;
+       
+    }
+    .contact_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    
+    }
+    .contact_title{
+        position: relative;
+        margin-bottom: 3rem;
+        width: 50%;
+        margin-top: 3rem;
+    }
+    .contact_item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact_title::after{
+        left: 50%;
+        width: 40%; /* Width of the border */            
+    }
+    .icon {
+        font-size: 0.9rem; /* Change the icon size as needed */
+        color: black;
+      }
+      .circle {
+        width: 1.6rem;
+        height:  1.6rem;
+        background-color: #6efbff; /* Change the color as desired */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+    .contact_container{
+        background-image: url("../img/littlepiano.jpg");
+        background-size: cover;
+        background-position:50% -20rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .contact_form_col{
+        width: 100%;
+    }
+    .contact_form{
+        background-color: rgba(5, 5, 27, 0.7) ;
+        margin-top: 2rem; 
+        margin-bottom: 3rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .submit_contact, .submit_contact:after, .submit_contact:hover{
+        background-color: #d10359;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    
+    
+    .submit_col{
+        display: flex;
+        margin-top: 3rem;
+       
+    }
+    .contact_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    
+    }
+    .contact_title{
+        position: relative;
+        margin-bottom: 3rem;
+        width: 50%;
+        margin-top: 3rem;
+    }
+    .contact_item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact_title::after{
+        left: 50%;
+        width: 40%; /* Width of the border */            
+    }
+    .icon {
+        font-size: 1.2rem; /* Change the icon size as needed */
+        color: black;
+    }
+    .circle {
+        width: 2rem;
+        height:  2rem;
+        background-color: #6efbff; /* Change the color as desired */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .contact_container{
+        background-image: url("../img/littlepiano.jpg");
+        background-size: cover;
+        background-position:50% 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+    .contact_info{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 10rem;
+        width: auto;
+        padding: 0;
+    }
+    .contact_form_col{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0;
+    }
+    .contact_form{
+        background-color: rgba(5, 5, 27, 0.7) ;
+        margin-top: 20%;
+        margin-left: 0;
+        
+    }
+    .submit_contact, .submit_contact:after, .submit_contact:hover{
+        background-color: #d10359;
+       
+    }
+    
+    .submit_col{
+        display: flex;
+        margin-top: 3rem;
+       
+    }
+    
+    .contact_title{
+        position: relative;
+        margin-bottom: 3rem;
+        width: 50%;
+        margin-top: 30%;
+    }
+    .contact_item{
+        display: flex;
+        flex-direction: row;
+    }
+    .icon {
+        font-size: 1.5rem; /* Change the icon size as needed */
+        
+    }
+    .circle {
+        width: 2.5rem;
+        height:  2.5rem;
+    }
+    .contact_text{
+        font-size: 1.2rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .contact_form{
+       margin-right: 0;
+        
+    }
+    .submit_contact, .submit_contact:after, .submit_contact:hover{
+   
+        width: 45%;
+    }
+    .contact_title{
+        width: 50%;
+       
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .submit_contact, .submit_contact:after, .submit_contact:hover{
+   
+        width: 30%;
+    }
+    .contact_title{
+        margin-top: 50%;
+       
+    }
+}

@@ -1,0 +1,104 @@
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {
+    .footer{
+        background-color: #05051b ;
+        border-top: solid 3px #6efbff;
+    }
+    .footer_logo_container{
+        visibility: hidden;
+        display: none;
+    }
+    .footer_icons_container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+    }
+    .footer_container{
+       
+        display: flex;
+        flex-direction:  column-reverse;
+        align-items: center;
+    }
+    .footer_icon{
+        font-size: 2rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+    .footer{
+        background-color: #05051b ;
+        border-top: solid 3px #6efbff;
+    }
+    .footer_logo_container{
+        visibility: hidden;
+        display: none;
+    }
+    .footer_icons_container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+    }
+    .footer_container{
+       
+        display: flex;
+        flex-direction:  column-reverse;
+        align-items: center;
+    }
+    .footer_icon{
+        font-size: 2rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .footer{
+        background-color: #05051b ;
+        border-top: solid 3px #6efbff;
+        
+    }
+    .footer_logo_container{
+        visibility: visible;
+        display: flex;
+    }
+    .footer_icons_container{
+        display: flex;
+        justify-content: end;
+        width: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    .footer_container{
+       
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        height: 7rem;
+    }
+    .footer_icon{
+        font-size: 1.5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
