@@ -19,24 +19,35 @@ const Footer = () => {
                         <h1 className="" href="#"><img src={logo} className="logo" alt="..." /></h1>
 
                     </div>
-                 
-                    <ul class=" col-4  list-unstyled  footer_icons_container">
-                    <li class="ms-3">
-                        <img src={logo1} className="logo1" alt="..." />
-                    </li>
-                    <li class="ms-3">
-                        <img src={logo2} className="logo1" alt="..." />
-                    </li>
-                        <li class="ms-3 mt-4">
-                            <i class="fa-brands fa-facebook fa-xl text-white footer_icon"></i>
+
+                    <ul className="col-4 list-unstyled footer_icons_container">
+                        <li className="ms-3">
+                            <a href="https://www.instagram.com/aqv_productora?igsh=bzR3a3hyYmZuM2c3" target="_blank" rel="noopener noreferrer">
+                                <img src={logo1} className="logo1" alt="Instagram AQV Productora" />
+                            </a>
                         </li>
-                        <li class="ms-3 mt-4">
-                            <i class="fa-brands fa-instagram fa-xl text-white footer_icon"></i>
+                        <li className="ms-3">
+                            <a href="https://www.instagram.com/poison777recs?igsh=OXd1dWRmOGl6Zzcy" target="_blank" rel="noopener noreferrer">
+                                <img src={logo2} className="logo1" alt="Instagram Poison777 Recs" />
+                            </a>
                         </li>
-                        <li class="ms-3 mt-4">
-                            <i class="fa-brands fa-linkedin-in fa-xl text-white footer_icon"></i>
+                        <li className="ms-3 mt-4">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-facebook fa-xl text-white footer_icon"></i>
+                            </a>
+                        </li>
+                        <li className="ms-3 mt-4">
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-instagram fa-xl text-white footer_icon"></i>
+                            </a>
+                        </li>
+                        <li className="ms-3 mt-4">
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-linkedin-in fa-xl text-white footer_icon"></i>
+                            </a>
                         </li>
                     </ul>
+
                 </footer>
             </div>
         </>
