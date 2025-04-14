@@ -98,9 +98,9 @@ h1,h2,h3,h4,p{
   font-size: x-large;
 }
 
-.banner_box {
+.banner_boxx {
   width: 100%;
-  background-image: url("../img/banner.jpg");
+  background-image: url("../img/compac.png");
   height: 65vh;
   background-size: cover;
   background-position:50% 60%;
@@ -172,7 +172,7 @@ h1,h2,h3,h4,p{
   }
   /*--------------------------------------- know more start*/
   .know_more_container{
-    height: 100vh;
+    height: 110vh;
     background-color: #05051b;
     display: flex;
     flex-direction: column-reverse;

@@ -9,7 +9,7 @@ import "../styles/aditional.css";
 import "../styles/who.css";
 import "../styles/examples.css";
 import "../styles/contact.css";
-import computadora from "../img/computadora.png"
+import computadora from "../img/compactera.png"
 import banner from "../img/banner.jpg"
 import logo from "../img/logo.png"
 
@@ -208,7 +208,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className="banner_box m-0 p-0" >
+                <div className="banner_boxx m-0 p-0" >
 
                 </div>
                 <div className="row who_container m-0" ref={WhoRef}>
