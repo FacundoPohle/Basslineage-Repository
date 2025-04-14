@@ -4,6 +4,7 @@ import "../styles/footer.css"
 import logo from "../img/logo.png"
 import logo1 from "../img/logo1.png"
 import logo2 from "../img/logo2.png"
+import logo3 from "../img/eraser.png"
 
 const Footer = () => {
 
@@ -29,6 +30,11 @@ const Footer = () => {
                         <li className="ms-3">
                             <a href="https://www.instagram.com/poison777recs?igsh=OXd1dWRmOGl6Zzcy" target="_blank" rel="noopener noreferrer">
                                 <img src={logo2} className="logo1" alt="Instagram Poison777 Recs" />
+                            </a>
+                        </li>
+                        <li className="ms-3">
+                            <a href="https://www.instagram.com/eraser.prod?igsh=MWNxcW01MnhzY2h5cA==" target="_blank" rel="noopener noreferrer">
+                                <img src={logo3} className="logo1" alt="Instagram Eraser" />
                             </a>
                         </li>
                         <li className="ms-3 mt-4">

@@ -109,7 +109,8 @@ const ExamplesCards = () => {
   const songs = [
     { src: "/LUCY-V3.mp3", title: "V3", name:"LUCY", sello:"Unrealesed"},
     { src: "/Daphna-22.mp3", title: "22", name:"Daphna", sello:"One Of Those Days" },
-    { src: "/Firebass-JumpIn.wav", title: "Jump In (Original Mix)", name:"Firebass", sello:"My Planet Record" }
+    // { src: "/Firebass-JumpIn.wav", title: "Jump In (Original Mix)", name:"Firebass", sello:"My Planet Record" },
+    { src: "/venice.mp3", title: "Someone like this", name:"Venice", sello:"Unreleased" }
   ];
 
   return (
