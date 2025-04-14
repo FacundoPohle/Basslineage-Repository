@@ -34,7 +34,7 @@ const Footer = () => {
                         </li>
                         <li className="ms-3">
                             <a href="https://www.instagram.com/eraser.prod?igsh=MWNxcW01MnhzY2h5cA==" target="_blank" rel="noopener noreferrer">
-                                <img src={logo3} className="logo1" alt="Instagram Eraser" />
+                                <img src={logo3} className="logo1" alt="Instagram Erase" />
                             </a>
                         </li>
                         <li className="ms-3 mt-4">
