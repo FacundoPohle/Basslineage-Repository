@@ -9,7 +9,7 @@ import "../styles/aditional.css";
 import "../styles/who.css";
 import "../styles/examples.css";
 import "../styles/contact.css";
-import computadora from "../img/compactera.png"
+import compactera from "../img/compactera.png"
 import banner from "../img/banner.jpg"
 import logo from "../img/logo.png"
 
@@ -126,7 +126,7 @@ const Home = () => {
                 </div>
                 <div className="row know_more_container m-0 " ref={knowMoreRef}>
                     <div className="col-12 col-sm-6 computer_container">
-                        <img src={computadora} className="computer_img" alt="..." />
+                        <img src={compactera} className="computer_img" alt="..." />
                     </div>
                     <div className="col-12 col-sm-6 about_text">
                         <p className="about"><strong>Si alguna vez soñaste con convertirte en Dj o productor musical y pinchar tus pistas en los
