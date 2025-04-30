@@ -68,6 +68,13 @@
         
         
     }
+
+    .whoalign{
+        width: 100%;
+    }
+    .whoparraf{
+        width: 100%;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

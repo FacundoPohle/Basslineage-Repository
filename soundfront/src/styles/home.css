@@ -204,6 +204,11 @@ h1,h2,h3,h4,p{
     margin-top: 0.7rem;
     height: 3rem;
   }
+
+  .logo2{
+    margin-top: 1.4rem;
+    height: 2rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -281,6 +286,10 @@ h1,h2,h3,h4,p{
     height: 3rem;
   }
 
+  .logo2{
+    margin-top: 1.4rem;
+    height: 3rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -322,6 +331,10 @@ h1,h2,h3,h4,p{
     }
     .logo1{
       height: 3rem;
+    }
+
+    .logo2{
+      height: 2rem;
     }
 }
 
@@ -370,6 +383,12 @@ h1,h2,h3,h4,p{
     margin-top: 0.3;
     height: 3.5rem;
   }
+
+  .logo2{
+    margin-top: 1.4rem;
+    height: 2rem;
+  }
+
   .contact_btn{
     width: 20%;
     
