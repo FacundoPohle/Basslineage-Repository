@@ -110,6 +110,11 @@ h1,h2,h3,h4,p{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
+
+.inst{
+  margin-top: 1.7rem;
+}
+
   .computer_img {
     transform: translateX(-100%);
     opacity: 0;
@@ -172,7 +177,7 @@ h1,h2,h3,h4,p{
   }
   /*--------------------------------------- know more start*/
   .know_more_container{
-    height: 140vh;
+    height: auto;
     background-color: #05051b;
     display: flex;
     flex-direction: column-reverse;
@@ -213,6 +218,11 @@ h1,h2,h3,h4,p{
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 576px) {
+
+  .inst{
+    margin-top: 1.7rem;
+  }
+
   .home_content_container{
     display: flex;
     margin-left: 2rem;
@@ -247,7 +257,7 @@ h1,h2,h3,h4,p{
   /*--------------------------------------- home end*/
   /*--------------------------------------- know more start*/
   .know_more_container{
-    height: 100vh;
+    height: auto;
     background-color: #05051b;
     display: flex;
     flex-direction: column-reverse;
@@ -287,7 +297,7 @@ h1,h2,h3,h4,p{
   }
 
   .logo2{
-    margin-top: 1.4rem;
+    margin-top: 1rem;
     height: 3rem;
   }
 }
@@ -335,6 +345,10 @@ h1,h2,h3,h4,p{
 
     .logo2{
       height: 2rem;
+    }
+
+    .inst{
+        margin-top: 1.35rem;
     }
 }
 
@@ -389,6 +403,10 @@ h1,h2,h3,h4,p{
     height: 2rem;
   }
 
+
+  .inst{
+    margin-top: 1.5rem;
+}
   .contact_btn{
     width: 20%;
     

@@ -54,7 +54,7 @@ const Footer = () => {
                                 <img src={logo5} className="logo2" alt="Instagram Poison777 Recs" />
                             </a>
                         </li>
-                        <li className="ms-3 mt-4">
+                        <li className="ms-3 inst">
                             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-instagram fa-xl text-white footer_icon"></i>
                             </a>
