@@ -55,7 +55,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li className="ms-3 inst">
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/bass.lineageacademia?igsh=MTZ6Y2MxbWcycWZ0cw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-instagram fa-xl text-white footer_icon"></i>
                             </a>
                         </li>
