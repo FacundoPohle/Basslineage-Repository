@@ -1,4 +1,14 @@
-
+.whoalign{
+    width: 35rem;
+}
+.whoparraf{
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-inline: 2rem;
+    width: 40rem;
+    background-color: #6efaff31;
+}
 
 .who_title::after{
     

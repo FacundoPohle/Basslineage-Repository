@@ -1,4 +1,6 @@
-
+/* .roww {
+    gap: 1rem;
+  } */
 
 .expect_title{
     position: relative;
@@ -52,7 +54,6 @@
         display: flex;
         flex-direction: column;
         
-        
     }
     
 }
@@ -66,17 +67,31 @@
         
     }
     .expect_text{
-        width: 85%;
+        width: 70%;
         font-size: 1.5rem;
+        /* text-align: justify */
     }
+
+    .expect_textt{
+        width: 40%;
+        font-size: 1.5rem;
+        /* text-align: justify */
+    }
+
+    /* .expect_texttitle{
+        width: 30%; */
+        /* font-size: 1.5rem; */
+        /* text-align: justify */
+    /* } */
     
     .expect_container{
         background-color: #161a3b;
-        height: 100vh;
+        /* height: 140vh; */
         display: flex;
         flex-direction: column;
         
     }
+
     .expect_col{
         display: flex;
         flex-direction: column;
@@ -85,6 +100,22 @@
         padding: 0;
     }
 
+    .expect_col-2{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        padding: 0;
+        padding-left: 4rem;
+        padding-top: 2rem;
+    }
+
+    .expect_text-sm {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #e0e0e0;
+        text-align: left;
+      }
     
 
 }
@@ -93,14 +124,18 @@
 @media only screen and (min-width: 768px) {
     .expect_text{
         
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .expect_text{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .expect_container{
+        flex-direction: row;
     }
 }
 
@@ -110,6 +145,6 @@
         font-size: 3.5rem;
     }
     .expect_text{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }

@@ -101,7 +101,7 @@ h1,h2,h3,h4,p{
 .banner_boxx {
   width: 100%;
   background-image: url("../img/compac.png");
-  height: 65vh;
+
   background-size: cover;
   background-position:50% 60%;
 }
@@ -336,7 +336,7 @@ h1,h2,h3,h4,p{
     padding-right: 4rem;
     background-color: #05051b;
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     overflow: auto;
     width: 100%;
     padding-top: 5rem;
