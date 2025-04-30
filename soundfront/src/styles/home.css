@@ -172,7 +172,7 @@ h1,h2,h3,h4,p{
   }
   /*--------------------------------------- know more start*/
   .know_more_container{
-    height: 120vh;
+    height: 125vh;
     background-color: #05051b;
     display: flex;
     flex-direction: column-reverse;
