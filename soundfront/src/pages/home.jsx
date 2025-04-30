@@ -118,28 +118,10 @@ const Home = () => {
                         <button type="button" className="btn btn-primary rounded-pill contact_btn mt-5" onClick={() => { toRef("contact") }}>Contactarme</button>
                         <div className="know_more">
                             <h4 className="know ">¿Queres saber mas?</h4>
-                            <div className="arrow_div  mt-3 p-2" onClick={() => { toRef("know_more") }}>
+                            <div className="arrow_div  mt-3 p-2" onClick={() => { toRef("expect") }}>
                                 <i className="fa-solid fa-angle-down fa-2xl arrow" ></i>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="row know_more_container m-0 " ref={knowMoreRef}>
-                    <div className="col-12 col-sm-6 computer_container">
-                        <img src={compactera} className="computer_img" alt="..." />
-                    </div>
-                    <div className="col-12 col-sm-6 about_text">
-                        <p className="about"><strong>Si alguna vez soñaste con convertirte en Dj o productor musical y pinchar tus pistas en los
-                            escenarios mas grandes del mundo, ¡estas en el lugar adecuado!</strong>
-                        </p>
-                        <p className="about">
-                            Imagina una pintura en la que cada color tiene su espacio, su intensidad y su matiz perfecto. <strong>La mezcla musical</strong> es exactamente eso, pero con sonidos. Es el arte de equilibrar emociones, darle profundidad a los susurros y presencia a los gritos, creando una atmósfera donde cada elemento respira en armonía, y puede inclusive hacerte vibrar con ella entonces.
-                        </p>
-                        <p className="about">
-                            La producción musical es un arte emocionante y creativo que te permite dar vida a tus
-                            ideas sonoras. ¿Y que mejor manera de empezar que con <strong>Ableton Live</strong>, una de las plataformas mas potentes y
-                            versatiles a del mundo para la creacion musical?
-                        </p>
                     </div>
                 </div>
                 <div className="banner_boxx m-0 p-0" ref={ExpectRef} >
@@ -201,10 +183,26 @@ const Home = () => {
 
                     </div>
                 </div>
-
-
-
-
+                <div className="row know_more_container m-0 " ref={knowMoreRef}>
+                    <div className="col-12 col-sm-6 computer_container">
+                        <img src={compactera} className="computer_img" alt="..." />
+                    </div>
+                    <div className="col-12 col-sm-6 about_text">
+                        <p className="about"><strong>Si alguna vez soñaste con convertirte en Dj o productor musical y pinchar tus pistas en los
+                            escenarios mas grandes del mundo, ¡estas en el lugar adecuado!</strong>
+                        </p>
+                        <p className="about">
+                            Imagina una pintura en la que cada color tiene su espacio, su intensidad y su matiz perfecto. <strong>La mezcla musical</strong> es exactamente eso, pero con sonidos. Es el arte de equilibrar emociones, darle profundidad a los susurros y presencia a los gritos, creando una atmósfera donde cada elemento respira en armonía, y puede inclusive hacerte vibrar con ella entonces.
+                        </p>
+                        <p className="about">
+                            La producción musical es un arte emocionante y creativo que te permite dar vida a tus
+                            ideas sonoras. ¿Y que mejor manera de empezar que con <strong>Ableton Live</strong>, una de las plataformas mas potentes y
+                            versatiles a del mundo para la creacion musical?
+                        </p>
+                    </div>
+                </div>
+               
+           
 
                 <div className="row additional_container m-0" ref={AdditionalRef} >
                     <div className="col  aditional_col">
