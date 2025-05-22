@@ -1,3 +1,33 @@
+.whatsapp-float {
+  position: fixed;
+  bottom: 80px;
+  right: 35px;
+  z-index: 1000;
+  text-decoration: none; /* ❌ quita el subrayado */
+}
+
+.whatsapp-float .circle {
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* ✅ verde WhatsApp */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-float .icon {
+  font-size: 30px;
+  color: white; /* ✅ ícono blanco sobre fondo verde */
+}
+
+.whatsapp-float:hover .circle {
+  transform: scale(1.1);
+}
+
+
 
 /* Animación para la imagen desde la izquierda */
 .computer_img {
@@ -213,6 +243,12 @@ h1,h2,h3,h4,p{
   .logo2{
     margin-top: 1.4rem;
     height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .whatsapp-float{
+    bottom: 100px;
   }
 }
 

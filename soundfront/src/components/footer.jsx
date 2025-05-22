@@ -19,7 +19,7 @@ const Footer = () => {
             <div class="container-fluid footer pt-3 m-0">
                 <footer class=" mx-5 footer_container">
                     <div class="col-4 d-flex align-items-center footer_logo_container">
-                        <h1 className="" href="#"><img src={logo} className="logo" alt="..." /></h1>
+                        <h1 className="" href="#"><img src={logo} className="logo" alt="Curso de DJ online con práctica en club en Barcelona" /></h1>
 
                     </div>
 

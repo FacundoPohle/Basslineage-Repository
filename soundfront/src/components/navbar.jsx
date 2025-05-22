@@ -45,7 +45,7 @@ const Navbar = ({ toRef }) => {
             <nav className={`navbar fixed-top ${isScrolled ? "scrolled" : ""}`} data-bs-backdrop="static">
                 <div className="container-fluid">
                     <h1 className="navbar-brand text-light" href="#">
-                        <img src={logo} className="logo" alt="..." />
+                        <img src={logo} className="logo" alt="Curso de DJ online con práctica en club en Barcelona" />
                     </h1>
                     <button
                         className="navbar-toggler custom-toggler"

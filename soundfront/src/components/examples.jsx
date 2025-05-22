@@ -52,7 +52,7 @@ const AudioPlayer = ({ src, title, name, sello }) => {
             <div className="p-3">
               <img
                 src={isPlaying ? pauseIcon : playIcon}
-                alt="Play/Pause Icon"
+                alt="Curso de DJ online con práctica en club en Barcelona"
                 width={70}
                 height={70}
                 style={{ cursor: "pointer", filter: "invert(1)" }}

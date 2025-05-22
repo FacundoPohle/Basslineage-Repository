@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
+import Testimonials from "../components/testimonials";
 import Footer from "../components/footer";
 import ContactForm from "../components/contact";
 import "../styles/home.css";
@@ -10,8 +11,6 @@ import "../styles/who.css";
 import "../styles/examples.css";
 import "../styles/contact.css";
 import compactera from "../img/compactera.png"
-import banner from "../img/banner.jpg"
-import logo from "../img/logo.png"
 
 
 const Home = () => {
@@ -113,9 +112,35 @@ const Home = () => {
                 <div className="home-container m-0">
                     <Navbar toRef={toRef} />
                     <div className=" text-start ms-sm-5 ps-sm-5  home_content_container">
-                        <h1>¡Descubre tu pasión por la el arte de la música electrónica!</h1>
-                        <h3 className="mt-4">Y prepárate para adentrarte en ésta experiencia!</h3>
+                        {/* <h1>¡Descubre tu pasión por la el arte de la música electrónica!</h1> */}
+                        <h1>🎧 Curso de DJ Online en Barcelona – Aprende a pinchar música electrónica desde cero</h1>
+                        <h3 className="mt-4">
+                            Clases de DJ profesionales con práctica en club – Formación para DJs principiantes y avanzados
+                        </h3>
+
+                        {/* <h3 className="mt-4">Y prepárate para adentrarte en ésta experiencia!</h3> */}
+                        
+
+                        <div style={{ display: "none" }}>
+                            <h2>Curso de DJ Bass Lineage</h2>
+                            <p>
+                                Bass Lineage ofrece formación profesional en DJing y producción musical en Barcelona. Nuestra academia para DJs emergentes
+                                te enseña a pinchar con CDJs Pioneer, mezclar música techno y house, y realizar presentaciones en vivo en clubes icónicos.
+                                Ideal para quienes buscan un curso para ser DJ profesional desde cero.
+                            </p>
+                        </div>
+
+                        <div style={{ display: "none" }}>
+                        <p className="seo_text mt-3">
+                            En nuestra <strong>escuela de DJs Bass Lineage</strong>, ofrecemos una <strong>formación intensiva de DJ electrónica</strong> 
+                            con acceso a eventos reales. Aprendé <strong>cómo mezclar música techno y house</strong>, dominar CDJs y realizar tu primera
+                            <strong>DJ performance en clubs icónicos de Barcelona</strong>.
+                        </p>
+                        </div>
+
+
                         <button type="button" className="btn btn-primary rounded-pill contact_btn mt-5" onClick={() => { toRef("contact") }}>Contactarme</button>
+                        
                         <div className="know_more">
                             <h4 className="know ">¿Queres saber mas?</h4>
                             <div className="arrow_div  mt-3 p-2" onClick={() => { toRef("expect") }}>
@@ -124,16 +149,33 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                <a
+                    href="https://wa.me/34674789724?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-float"
+                >
+                    <div className="circle">
+                        <i className="fa-brands fa-whatsapp icon"></i>
+                    </div>
+                </a>
+
+
                 <div className="banner_boxx m-0 p-0" ref={ExpectRef} >
                     <div className="col pt-5 expect_col">
                         <h2 className="expect_title">¿Qué podés esperar de estudiar con nosotros?</h2>
 
-
+                        <h4 className="expect_texttitle mt-4">Curso de mezcla DJ y producción musical</h4>
                         <p className="expect_text pt-5">
+                            Este <strong>curso de DJ online y presencial</strong> te introduce en el universo del DJing y la <strong>producción musical</strong>.
+                            Aprenderás desde cero a usar CDJs, mezclar pistas y dominar <strong>Ableton Live</strong> como los DJs profesionales.
+                        </p>
+
+                        {/* <p className="expect_text pt-5">
                             En nuestro curso de mezcla de Dj, te sumergirás en el emocionante mundo de
                             la música electrónica. Aprenderás desde lo basico hasta tecnicas avanzadas
                             para mezclar pistas asombrosas.
-                        </p>
+                        </p> */}
                         <p className="expect_text pt-3">
                             Habiendo finalizado el curso tendrás la posibilidad de pinchar en uno de los clubes mas icónicos del mundo 🍒, de la mano de la productora AQV producciones y sus grandes residencias.
                         </p>
@@ -185,7 +227,7 @@ const Home = () => {
                 </div>
                 <div className="row know_more_container m-0 " ref={knowMoreRef}>
                     <div className="col-12 col-sm-6 computer_container">
-                        <img src={compactera} className="computer_img" alt="..." />
+                        <img src={compactera} className="computer_img" alt="Curso de DJ online con práctica en club en Barcelona" />
                     </div>
                     <div className="col-12 col-sm-6 about_text">
                         <p className="about"><strong>Si alguna vez soñaste con convertirte en Dj o productor musical y pinchar tus pistas en los
@@ -201,8 +243,8 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-               
-           
+
+
 
                 <div className="row additional_container m-0" ref={AdditionalRef} >
                     <div className="col  aditional_col">
@@ -243,7 +285,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="row aditional_buton_row">
-                            <button type="button" className="btn btn-primary rounded-pill contact_aditional_btn " onClick={() => { toRef("contact") }}>¡Quiero hacer el curso!</button>
+                            <button type="button" className="btn btn-primary rounded-pill contact_aditional_btn " onClick={() => { toRef("contact") }}>¡Empezar curso de DJ profesional!</button>
                         </div>
                     </div>
 
@@ -271,7 +313,7 @@ const Home = () => {
                         </div>
 
                         <div className="whoparraf mt-4">
-                        <h3 className="expect_texttitle pb-3 mb-3">🕓 Detalles del Curso</h3>
+                            <h3 className="expect_texttitle pb-3 mb-3">🕓 Detalles del Curso</h3>
                             <p className="who_text whoalign text-start">
                                 📅 Duración: 4 meses<br />
                                 📍 Ubicación: Barcelona (presencial)<br />
@@ -315,6 +357,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                <Testimonials />
 
                 <ContactForm ref={ContactRef} />
             </div>

@@ -113,8 +113,8 @@ const ContactForm = forwardRef((props, ref) => {
                         </div>
                         <p className="contact_text">basslineageacademia@gmail.com</p>
                     </li>
-                    <li className="contact_item">
-                    <a href="https://wa.me/34674789724?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
+                    {/* <li className="contact_item">
+                        <a href="https://wa.me/34674789724?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="whatsapp_link">
@@ -123,9 +123,9 @@ const ContactForm = forwardRef((props, ref) => {
                             </div>
                         </a>
                         <p className="contact_text">+34 674 78 97 24</p>
-                    </li>
+                    </li> */}
                     <li className="contact_item">
-                    <a href="https://wa.me/34607817148?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
+                        <a href="https://wa.me/34607817148?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="whatsapp_link">
@@ -147,12 +147,31 @@ const ContactForm = forwardRef((props, ref) => {
                         <p className="contact_text">+39 342 06 90 210</p>
                     </li>
                     <li className="contact_item">
-                        <div className="circle me-2">
-                            <i className="fa-solid fa-location-dot icon"></i>
-                        </div>
+                        <a
+                            href="https://www.google.com/maps?q=Carrer+Magalhaes+23,+Barcelona"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="whatsapp_link"
+                        >
+                            <div className="circle me-2">
+                                <i className="fa-solid fa-location-dot icon"></i>
+                            </div>
+                        </a>
+
                         <p className="contact_text">Carrer Magalhaes 23</p>
                     </li>
                 </ul>
+                <div style={{ width: "100%", maxWidth: "350px", height: "250px" }}>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.3006075692863!2d2.1670136766228625!3d41.36824469820206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2da25b5782f%3A0x6cbe80c8e6fe76f1!2sC%2F%20de%20Magalh%C3%A3es%2C%2023%2C%20Sants-Montju%C3%AFc%2C%2008014%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sar!4v1716391090334!5m2!1sen!2sar"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, borderRadius: "10px" }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
             </div>
         </div>
     );
