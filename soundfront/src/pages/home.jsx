@@ -113,7 +113,7 @@ const Home = () => {
                     <Navbar toRef={toRef} />
                     <div className=" text-start ms-sm-5 ps-sm-5  home_content_container">
                         {/* <h1>¡Descubre tu pasión por la el arte de la música electrónica!</h1> */}
-                        <h1>🎧 Curso de DJ Online en Barcelona – Aprende a pinchar música electrónica desde cero</h1>
+                        <h1>🎧 Curso de DJ en Barcelona – Aprende a pinchar música electrónica desde cero</h1>
                         <h3 className="mt-4">
                             Clases de DJ profesionales con práctica en club – Formación para DJs principiantes y avanzados
                         </h3>
