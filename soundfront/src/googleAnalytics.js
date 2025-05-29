@@ -13,7 +13,6 @@ export const initGA = () => {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-CNXJY3483Z');
-      gtag("config", "AW-17110054214");
     `;
     document.head.appendChild(script2);
   }
