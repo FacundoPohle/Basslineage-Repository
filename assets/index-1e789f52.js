@@ -133,4 +133,5 @@ https://sweetalert2.github.io/#ajax-request`),G0(e),typeof e.title=="string"&&(e
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-CNXJY3483Z');
+      gtag("config", "AW-17110054214");
     `,document.head.appendChild(t)}},vy=()=>{window.gtag&&window.gtag("event","page_view",{page_path:window.location.pathname+window.location.search})},yy=()=>{const e=Pi();return S.useEffect(()=>{vy()},[e]),null};function xy(){S.useEffect(()=>{wy()},[]);const e={}.BASENAME||"";return u.jsx("div",{className:"cont",children:u.jsxs(Jg,{basename:e,children:[u.jsx(yy,{}),u.jsxs(Kg,{children:[u.jsx(Po,{element:u.jsx(dy,{}),path:"/"}),u.jsx(Po,{element:u.jsx(gy,{}),path:"/examples"}),u.jsx(Po,{element:u.jsx("h1",{children:"Not found!"})})]})]})})}const ky=ew(xy);pl.createRoot(document.getElementById("root")).render(u.jsx(hs.StrictMode,{children:u.jsx(ky,{})}));
