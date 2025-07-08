@@ -46,3 +46,22 @@
     font-size: 0.9rem;
     color: #6efbff;
 }
+
+.testimonial_intro {
+  text-align: center;
+  margin-bottom: auto;
+      margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.testimonial_stars {
+  font-size: 1.5rem;
+  color: white !important;
+  margin-bottom: 0.3rem;
+}
+
+.testimonial_quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #fafafa;
+}

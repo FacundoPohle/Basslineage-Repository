@@ -11,6 +11,8 @@ import "../styles/who.css";
 import "../styles/examples.css";
 import "../styles/contact.css";
 import compactera from "../img/compactera.png"
+import logo from "../img/logo.png";
+
 
 
 const Home = () => {
@@ -111,15 +113,21 @@ const Home = () => {
             <div className="container-fluid m-0 p-0">
                 <div className="home-container m-0">
                     <Navbar toRef={toRef} />
-                    <div className=" text-start ms-sm-5 ps-sm-5  home_content_container">
-                        {/* <h1>¡Descubre tu pasión por la el arte de la música electrónica!</h1> */}
-                        <h1>🎧 Curso de DJ en Barcelona – Aprende a pinchar música electrónica desde cero</h1>
-                        <h3 className="mt-4">
-                            Clases de DJ profesionales con práctica en club – Formación para DJs principiantes y avanzados
+                    <div className="home_content_container">
+                        <div class="testimonial_intro">
+                            <div class="testimonial_stars">★ ★ ★ ★ ★</div>
+                            <p class="testimonial_quote">"Aprendí a ser DJ y de la mano de los mejores, una experiencia que me marcó"</p>
+                        </div>
+                        {/* <h1 className=" text-light" href="#">
+                            <img src={logo} className="logo" alt="Curso de DJ online con práctica en club en Barcelona" />
+                        </h1> */}
+                        <h1 className="mt-5">¿SOÑAS CON SER DJ?</h1>
+                        <h3 className="mt-4 somee text-center">
+                            ¡Descubrí la mejor academia en Barcelona! Pinchá música electrónica desde cero!
                         </h3>
 
                         {/* <h3 className="mt-4">Y prepárate para adentrarte en ésta experiencia!</h3> */}
-                        
+
 
                         <div style={{ display: "none" }}>
                             <h2>Curso de DJ Bass Lineage</h2>
@@ -131,16 +139,16 @@ const Home = () => {
                         </div>
 
                         <div style={{ display: "none" }}>
-                        <p className="seo_text mt-3">
-                            En nuestra <strong>escuela de DJs Bass Lineage</strong>, ofrecemos una <strong>formación intensiva de DJ electrónica</strong> 
-                            con acceso a eventos reales. Aprendé <strong>cómo mezclar música techno y house</strong>, dominar CDJs y realizar tu primera
-                            <strong>DJ performance en clubs icónicos de Barcelona</strong>.
-                        </p>
+                            <p className="seo_text mt-3">
+                                En nuestra <strong>escuela de DJs Bass Lineage</strong>, ofrecemos una <strong>formación intensiva de DJ electrónica</strong>
+                                con acceso a eventos reales. Aprendé <strong>cómo mezclar música techno y house</strong>, dominar CDJs y realizar tu primera
+                                <strong>DJ performance en clubs icónicos de Barcelona</strong>.
+                            </p>
                         </div>
 
 
-                        <button type="button" className="btn btn-primary rounded-pill contact_btn mt-5" onClick={() => { toRef("contact") }}>Contactarme</button>
-                        
+                        <button type="button" className="btn btn-primary rounded-pill contact_btn" onClick={() => { toRef("contact") }}>Reservá tu lugar !</button>
+
                         <div className="know_more">
                             <h4 className="know ">¿Queres saber mas?</h4>
                             <div className="arrow_div  mt-3 p-2" onClick={() => { toRef("expect") }}>
