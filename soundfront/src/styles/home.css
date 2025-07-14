@@ -263,6 +263,7 @@ h1,h2,h3,h4,p{
     margin-top: 1.4rem;
     height: 2rem;
   }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -292,6 +293,7 @@ h1,h2,h3,h4,p{
     border-radius: 50%;
     background-color: #6efbff;
     color: #161a3b;
+    cursor: pointer;
   }
   .arrow{
     margin-top: auto;

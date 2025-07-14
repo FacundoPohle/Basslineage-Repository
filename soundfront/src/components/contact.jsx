@@ -48,8 +48,10 @@ const ContactForm = forwardRef((props, ref) => {
     };
 
     return (
-        <div className="row contact_container m-0" ref={ref}>
+        <div>
+            <div className="row contact_container m-0" ref={ref}>
             <div className="col-5 col-md-6 contact_form_col">
+            <h2 className="contact_title">Contáctanos</h2>
                 <div className="contact_form p-md-5 p-4">
                     <form onSubmit={handleSubmit}>
                         <div className="mb-3">
@@ -105,7 +107,7 @@ const ContactForm = forwardRef((props, ref) => {
                 </div>
             </div>
             <div className="col-3 contact_info ms-lg-5">
-                <h2 className="contact_title">Contáctanos</h2>
+                
                 <ul className="contact_list">
                     <li className="contact_item">
                         <div className="circle me-2">
@@ -161,7 +163,7 @@ const ContactForm = forwardRef((props, ref) => {
                         <p className="contact_text">Carrer Magalhaes 23</p>
                     </li>
                 </ul>
-                <div style={{ width: "100%", maxWidth: "350px", height: "250px" }}>
+                <div style={{ width: "100%", maxWidth: "350px", height: "250px", marginBottom: "2rem"}}>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.3006075692863!2d2.1670136766228625!3d41.36824469820206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2da25b5782f%3A0x6cbe80c8e6fe76f1!2sC%2F%20de%20Magalh%C3%A3es%2C%2023%2C%20Sants-Montju%C3%AFc%2C%2008014%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sar!4v1716391090334!5m2!1sen!2sar"
                         width="100%"
@@ -173,6 +175,7 @@ const ContactForm = forwardRef((props, ref) => {
                     ></iframe>
                 </div>
             </div>
+        </div>
         </div>
     );
 });

@@ -32,6 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 !important;
 }
 
 .contact_examples_btn, .contact_examples_btn:after, .contact_examples_btn:hover{
@@ -117,9 +118,15 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
+
+    .join_text{
+        text-align: center;
+        padding: 0 3.2rem 0 3.2rem;
+    }
     .example_title{
         position: relative;
         margin-bottom: 3rem;
+        text-align: center;
         
     }
     .example_text{
@@ -128,13 +135,14 @@
     .example_row{
        
         background-color: rgba(5, 5, 27, 0.7) ;
-        width: 85%;
+        width: 100%;
+        padding: 2rem 3rem 2rem 3rem;
         display: flex;
         align-items: center;
     }
     
     .contact_examples_row{
-        width: 85%;
+        width: 70%;
         margin-top: 3rem;
     }
     .contact_examples_btn{
@@ -152,18 +160,20 @@
     .example_title{
         position: relative;
         margin-bottom: 3rem;
+        text-align: center;
         
     }
     .example_text{
         font-size: 1.3rem;
     }
     .example_row{
-        width: 85%;
+        width: 100%;
         background-color: rgba(5, 5, 27, 0.7) ;
         margin-top: 5rem;
         display: flex;
         align-items: center;
-        padding: 2rem;
+        text-align: center;
+        padding: 3.5rem;
     }
     
     .contact_examples_row{
@@ -185,6 +195,7 @@
         width: 70%;
         padding: 0;
         font-size: 2rem;
+        text-align: center;
     }
     .examples_container{
         background-image: url("../img/wavefondo.jpg");

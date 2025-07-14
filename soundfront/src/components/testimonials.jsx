@@ -10,6 +10,7 @@ const Testimonials = () => {
     return (
         <>
             <section className="testimonials_section py-5">
+                <div class="testimonial_stars text-center">★ ★ ★ ★ ★</div>
                 <h2 className="testimonial_title text-center mb-5">Lo que dicen nuestros estudiantes</h2>
                 <div className="container">
                     <div className="row justify-content-center">

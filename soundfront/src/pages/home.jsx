@@ -198,37 +198,41 @@ const Home = () => {
                 <div className="container-fluid expect_container m-0">
                     <div className="row justify-content-start  pt-4 pb-4 ps-4 pe-4">
 
-                        <div className="col-12 col-lg-4 mt-3 text-start">
+                        <div className="col-12 col-lg-4 mt-3 ">
                             <h3 className="expect_texttitle">👤 ¿Para quién es este curso?</h3>
-                            <p className="expect_text-sm">
-                                ✅ Sin experiencia previa: empezá desde cero.<br />
-                                ✅ DJs autodidactas: llevá tu técnica al siguiente nivel.<br />
-                                ✅ Productores musicales: dominá Ableton Live.<br />
-                                ✅ Músicos: explorá el universo de la electrónica.
-                            </p>
+                            <div  className="expect_text-sm mt-2">
+        
+                            <p>✅ Sin experiencia previa: empezá desde cero.</p>
+                            <p>✅ DJs autodidactas: llevá tu técnica al siguiente nivel.</p>
+                            <p> ✅ Productores musicales: dominá Ableton Live.</p>
+                            <p>✅ Músicos: explorá el universo de la electrónica.</p>
+                            </div>
                         </div>
 
-                        <div className="col-12 col-lg-4 mt-3 text-start">
+                        <div className="col-12 col-lg-4 mt-3 ">
                             <h3 className="expect_texttitle">🎛️ Módulo 1: Curso de DJing Presencial</h3>
-                            <p className="expect_text-sm">
-                                Aprendé a mezclar como un profesional y conquistá la pista de baile:<br />
-                                - Manejo completo de CDJ Pioneer y mixer profesional<br />
-                                - Beatmatching, mezcla armónica y técnicas avanzadas<br />
-                                - Selección musical, estructura de sets y lectura del público<br />
-                                - Branding artístico, marketing y booking de fechas<br />
-                                📍 Incluye actuación final en un club icónico de Barcelona
-                            </p>
+                            <div className="expect_text-sm mt-2">
+                                <p> Aprendé a mezclar como un profesional y conquistá la pista de baile:</p>
+                                <p>- Manejo completo de CDJ Pioneer y mixer profesional</p>
+                                <p>- Beatmatching, mezcla armónica y técnicas avanzadas</p>
+                                <p>- Selección musical, estructura de sets y lectura del público</p>
+                                <p >- Branding artístico, marketing y booking de fechas</p>
+                                <p> 📍 Incluye actuación final en un club icónico de Barcelona</p>
+                            </div>
                         </div>
 
-                        <div className="col-12 col-lg-4 mt-3 text-start">
+                        <div className="col-12 col-lg-4 mt-3">
                             <h3 className="expect_texttitle">🎹 Módulo 2: Producción Musical con Ableton Live</h3>
-                            <p className="expect_text-sm mb-5">
-                                Creá tu propio sonido y temas originales:<br />
-                                - Fundamentos de Ableton y flujo creativo<br />
-                                - Creación de ritmos, bajos, sintetizadores y efectos<br />
-                                - Técnicas de mezcla y mastering básico<br />
-                                - Exportación para DJs, plataformas digitales y sellos
-                            </p>
+                            <div className="expect_text-sm mt-2">
+                                <p className=" mb-5">
+                                    Creá tu propio sonido y temas originales:
+
+                                </p>
+                                <p> - Fundamentos de Ableton y flujo creativo</p>
+                                <p>- Creación de ritmos, bajos, sintetizadores y efectos</p>
+                                <p>  - Técnicas de mezcla y mastering básico</p>
+                                <p>- Exportación para DJs, plataformas digitales y sellos</p>
+                            </div>
                         </div>
 
                     </div>
@@ -293,7 +297,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="row aditional_buton_row">
-                            <button type="button" className="btn btn-primary rounded-pill contact_aditional_btn " onClick={() => { toRef("contact") }}>¡Empezar curso de DJ profesional!</button>
+                            <button type="button" className="btn btn-primary rounded-pill contact_aditional_btn " onClick={() => { toRef("contact") }}>¡Quiero empezar ahora!</button>
                         </div>
                     </div>
 
@@ -302,8 +306,8 @@ const Home = () => {
                 <div className="row who_container m-0" ref={WhoRef}>
                     <div className="col  who_col ">
                         <div className="row w-100 d-flex justify-content-center">
-                            <h2 className=" mt-5">¿Quién puede aprender con nosotros?</h2>
-                            <h2 className=" who_title mt-2">¡Todos pueden!</h2>
+                            <h2 className="aa_title mt-5">¿Quién puede aprender con nosotros?</h2>
+                            <h2 className=" who_title">¡Todos pueden!</h2>
                         </div>
                         <div className="row who_first_row ">
                             <p className="who_text">

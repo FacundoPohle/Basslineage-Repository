@@ -10,7 +10,7 @@
     background-color: #6efaff31;
 }
 
-.who_title::after{
+.aa_title::after{
     
     content: '';
     display: flex;
@@ -44,9 +44,16 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
+
+    .aa_title{
+        width: 80%;
+        text-align: center;
+}
     .who_title{
         position: relative;
         margin-bottom: 3rem;
+        margin-top: 1.2rem;
+        text-align: center;
         
     }
     .who_text{
@@ -84,13 +91,18 @@
         font-size: 2.5rem;
 
     }
+    .aa_title{
+        text-align: center;
+    }
     .who_title{
         position: relative;
         margin-bottom: 4rem;
-        
+        text-align: center;
+        margin-top: 2rem;
        
     }
     .who_text{
+        text-align: center;
         font-size: 1.5rem;
     }
     .who_container{

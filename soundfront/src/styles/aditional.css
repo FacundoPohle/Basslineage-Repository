@@ -62,6 +62,7 @@
     }
     .aditional_title{
         position: relative;
+        text-align: center;
         margin-bottom: 3rem;
         width: 100%;
     }
@@ -69,6 +70,7 @@
         position: relative;
         margin-bottom: 3rem;
         width: 100%;
+        text-align: center;
     }
     .aditional_row{
         display: flex;
@@ -106,6 +108,8 @@
         margin-bottom: 7rem;
         width: 100%;
         font-size: 2.5rem;
+        text-align: center;
+
     }
 
     .aditional_titleexample{
@@ -113,6 +117,7 @@
         margin-bottom: 5rem;
         width: 100%;
         font-size: 2.5rem;
+        text-align: center;
     }
     .additional_container{
         background-image: url("../img/piano.jpg");
@@ -134,6 +139,7 @@
         background-color: rgba(5, 5, 27, 0.7) ;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+        padding: 1.4rem 3rem 1.4rem 3rem;
         border-radius: 8px;
        
     }
