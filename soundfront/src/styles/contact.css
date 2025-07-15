@@ -109,6 +109,10 @@
         align-items: center;
         color: white;
       }
+
+      .contact_list{
+        padding-left: 0;
+      }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

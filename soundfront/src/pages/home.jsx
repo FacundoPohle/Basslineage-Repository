@@ -63,7 +63,7 @@ const Home = () => {
                     entry.target.querySelector('.about_text').classList.add('show');
                 }
             },
-            { threshold: 0.5 } // Ajusta este valor según cuándo quieras que la animación se dispare
+            { threshold: 0.2 } // Ajusta este valor según cuándo quieras que la animación se dispare
         );
 
         if (knowMoreRef.current) {
@@ -104,30 +104,30 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        const boxes = entry.target.querySelectorAll('.aditionalinout');
-        boxes.forEach((box, index) => {
-          setTimeout(() => {
-            box.classList.add('show');
-          }, index * 300);
-        });
-      }
-    },
-    { threshold: 0.5 }
-  );
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    const boxes = entry.target.querySelectorAll('.aditionalinout');
+                    boxes.forEach((box, index) => {
+                        setTimeout(() => {
+                            box.classList.add('show');
+                        }, index * 300);
+                    });
+                }
+            },
+            { threshold: 0.2 }
+        );
 
-  if (AditionalRef.current) {
-    observer.observe(AditionalRef.current);
-  }
+        if (AditionalRef.current) {
+            observer.observe(AditionalRef.current);
+        }
 
-  return () => {
-    if (AditionalRef.current) {
-      observer.unobserve(AditionalRef.current);
-    }
-  };
-}, []);
+        return () => {
+            if (AditionalRef.current) {
+                observer.unobserve(AditionalRef.current);
+            }
+        };
+    }, []);
 
 
     const navigate = useNavigate()
@@ -216,7 +216,7 @@ const Home = () => {
                             la música electrónica. Aprenderás desde lo basico hasta tecnicas avanzadas
                             para mezclar pistas asombrosas.
                         </p> */}
-                        <p className="expect_text pt-3">
+                        <p className="onlycolor expect_text pt-3">
                             Habiendo finalizado el curso tendrás la posibilidad de pinchar en uno de los clubes mas icónicos del mundo 🍒, de la mano de la productora AQV producciones y sus grandes residencias.
                         </p>
                         <p className="expect_text pt-3 pb-5 ">
@@ -406,11 +406,9 @@ const Home = () => {
                                 Escuchá los ejemplos
                             </button>
                         </div>
-                        <div className="mt-5 mb-5">
-                            <h3 className="mt-md-3  join_text">
+                            <h3 className="join_text">
                                 ¡Únete a nosotros y prepárate para transformar tus sueños musicales en realidad!
                             </h3>
-                        </div>
                     </div>
                 </div>
                 <Testimonials />
