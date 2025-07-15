@@ -406,7 +406,7 @@ const Home = () => {
                                 Escuchá los ejemplos
                             </button>
                         </div>
-                        <div className="row d-flex justify-content-center mt-5 mb-5">
+                        <div className="mt-5 mb-5">
                             <h3 className="mt-md-3  join_text">
                                 ¡Únete a nosotros y prepárate para transformar tus sueños musicales en realidad!
                             </h3>

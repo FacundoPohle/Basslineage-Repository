@@ -151,7 +151,7 @@
     .examples_container{
         background-image: url("../img/wavefondo.jpg");
         background-size: cover;
-        background-position:50% 20%;
+        background-position:50%;
     }
 }
 
@@ -198,6 +198,7 @@
         text-align: center;
     }
     .examples_container{
+        width: 100%;
         background-image: url("../img/wavefondo.jpg");
         background-size: cover;
         background-position:50% ;
