@@ -89,7 +89,7 @@ const Home = () => {
                     });
                 }
             },
-            { threshold: 0.5 } // Ajusta el umbral según necesites
+            { threshold: 0.1 } // Ajusta el umbral según necesites
         );
 
         if (AdditionalRef.current) {
