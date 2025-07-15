@@ -25,7 +25,7 @@
 
 .expect_text {
     width: 80%;
-
+    
     font-size: 1.5rem;
 }
 
@@ -36,12 +36,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        padding: 0 1.5rem 0 1.5rem;
+        width: 100%;
+        /* padding: 0 1.5rem 0 1.5rem; */
 
     }
 
     .expect_texttitle {
+        text-align: left;
+    }
+
+    .expect_curso {
         text-align: center;
+        padding-inline: 2rem;
     }
 
     .expect_title {
@@ -52,9 +58,10 @@
     }
 
     .expect_text {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
         width: auto;
+        text-align: justify;
         font-size: 1.2rem;
     }
 
@@ -107,6 +114,7 @@
         /* height: 140vh; */
         display: flex;
         flex-direction: column;
+        width: 100% !important;
 
     }
 
@@ -142,8 +150,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .expect_text {
-        text-align: center;
-        
+        text-align: justify;        
         font-size: 1.5rem;
     }
 

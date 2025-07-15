@@ -11,6 +11,7 @@ import "../styles/who.css";
 import "../styles/examples.css";
 import "../styles/contact.css";
 import compactera from "../img/compactera.png"
+import djtocando from "../img/compac.png"
 import logo from "../img/logo.png";
 
 
@@ -20,6 +21,7 @@ const Home = () => {
     const knowMoreRef = useRef(null)
     const ExpectRef = useRef(null)
     const AdditionalRef = useRef(null)
+    const AditionalRef = useRef(null)
     const WhoRef = useRef(null)
     const ExamplesRef = useRef(null)
     const ContactRef = useRef(null)
@@ -101,6 +103,33 @@ const Home = () => {
         };
     }, []);
 
+    useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        const boxes = entry.target.querySelectorAll('.aditionalinout');
+        boxes.forEach((box, index) => {
+          setTimeout(() => {
+            box.classList.add('show');
+          }, index * 300);
+        });
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  if (AditionalRef.current) {
+    observer.observe(AditionalRef.current);
+  }
+
+  return () => {
+    if (AditionalRef.current) {
+      observer.unobserve(AditionalRef.current);
+    }
+  };
+}, []);
+
+
     const navigate = useNavigate()
 
     const handleClick = () => {
@@ -169,11 +198,14 @@ const Home = () => {
                 </a>
 
 
-                <div className="banner_boxx m-0 p-0" ref={ExpectRef} >
-                    <div className="col pt-5 expect_col">
+                <div className="banner_boxx" ref={ExpectRef} >
+                    <div className="compac_container">
+                        <img src={djtocando} className="compac_container_img" alt="consola" />
+                    </div>
+                    <div className=" pt-5 expect_col">
                         <h2 className="expect_title">¿Qué podés esperar de estudiar con nosotros?</h2>
 
-                        <h4 className="expect_texttitle mt-4">Curso de mezcla DJ y producción musical</h4>
+                        <h4 className="expect_curso mt-4">Curso de mezcla DJ y producción musical</h4>
                         <p className="expect_text pt-5">
                             Este <strong>curso de DJ online y presencial</strong> te introduce en el universo del DJing y la <strong>producción musical</strong>.
                             Aprenderás desde cero a usar CDJs, mezclar pistas y dominar <strong>Ableton Live</strong> como los DJs profesionales.
@@ -187,81 +219,25 @@ const Home = () => {
                         <p className="expect_text pt-3">
                             Habiendo finalizado el curso tendrás la posibilidad de pinchar en uno de los clubes mas icónicos del mundo 🍒, de la mano de la productora AQV producciones y sus grandes residencias.
                         </p>
-                        <p className="expect_text pt-3 mb-5 pb-5 ">
+                        <p className="expect_text pt-3 pb-5 ">
                             Pero eso no es todo. Tambien te enseñaremos las complejidades del mundo de la producción musical, guiándote en el
                             proceso de mezcla y masterización, poniendo un énfasis especial en la calidad sonora. Exploraremos el uso
                             experto de compresores, ecualizadores y exitación hipoacústica para garantizar que cada nota, cada ritmo
                             y cada detalle se perciban con una claridad y profundidad excepcionales.
                         </p>
+                        <a href="https://wa.me/34674789724?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <button type="button" className="btn btn-primary rounded-pill extra contact_aditional_btn mb-5">¡Quiero mas información!</button>
+
+                        </a>
                     </div>
                 </div>
-                <div className="container-fluid expect_container m-0">
-                    <div className="row justify-content-start  pt-4 pb-4 ps-4 pe-4">
-
-                        <div className="col-12 col-lg-4 mt-3 ">
-                            <h3 className="expect_texttitle">👤 ¿Para quién es este curso?</h3>
-                            <div  className="expect_text-sm mt-2">
-        
-                            <p>✅ Sin experiencia previa: empezá desde cero.</p>
-                            <p>✅ DJs autodidactas: llevá tu técnica al siguiente nivel.</p>
-                            <p> ✅ Productores musicales: dominá Ableton Live.</p>
-                            <p>✅ Músicos: explorá el universo de la electrónica.</p>
-                            </div>
-                        </div>
-
-                        <div className="col-12 col-lg-4 mt-3 ">
-                            <h3 className="expect_texttitle">🎛️ Módulo 1: Curso de DJing Presencial</h3>
-                            <div className="expect_text-sm mt-2">
-                                <p> Aprendé a mezclar como un profesional y conquistá la pista de baile:</p>
-                                <p>- Manejo completo de CDJ Pioneer y mixer profesional</p>
-                                <p>- Beatmatching, mezcla armónica y técnicas avanzadas</p>
-                                <p>- Selección musical, estructura de sets y lectura del público</p>
-                                <p >- Branding artístico, marketing y booking de fechas</p>
-                                <p> 📍 Incluye actuación final en un club icónico de Barcelona</p>
-                            </div>
-                        </div>
-
-                        <div className="col-12 col-lg-4 mt-3">
-                            <h3 className="expect_texttitle">🎹 Módulo 2: Producción Musical con Ableton Live</h3>
-                            <div className="expect_text-sm mt-2">
-                                <p className=" mb-5">
-                                    Creá tu propio sonido y temas originales:
-
-                                </p>
-                                <p> - Fundamentos de Ableton y flujo creativo</p>
-                                <p>- Creación de ritmos, bajos, sintetizadores y efectos</p>
-                                <p>  - Técnicas de mezcla y mastering básico</p>
-                                <p>- Exportación para DJs, plataformas digitales y sellos</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="row know_more_container m-0 " ref={knowMoreRef}>
-                    <div className="col-12 col-sm-6 computer_container">
-                        <img src={compactera} className="computer_img" alt="Curso de DJ online con práctica en club en Barcelona" />
-                    </div>
-                    <div className="col-12 col-sm-6 about_text">
-                        <p className="about"><strong>Si alguna vez soñaste con convertirte en Dj o productor musical y pinchar tus pistas en los
-                            escenarios mas grandes del mundo, ¡estas en el lugar adecuado!</strong>
-                        </p>
-                        <p className="about">
-                            Imagina una pintura en la que cada color tiene su espacio, su intensidad y su matiz perfecto. <strong>La mezcla musical</strong> es exactamente eso, pero con sonidos. Es el arte de equilibrar emociones, darle profundidad a los susurros y presencia a los gritos, creando una atmósfera donde cada elemento respira en armonía, y puede inclusive hacerte vibrar con ella entonces.
-                        </p>
-                        <p className="about">
-                            La producción musical es un arte emocionante y creativo que te permite dar vida a tus
-                            ideas sonoras. ¿Y que mejor manera de empezar que con <strong>Ableton Live</strong>, una de las plataformas mas potentes y
-                            versatiles a del mundo para la creacion musical?
-                        </p>
-                    </div>
-                </div>
-
-
-
                 <div className="row additional_container m-0" ref={AdditionalRef} >
                     <div className="col  aditional_col">
                         <div className="row w-100 d-flex justify-content-center">
-                            <h2 className="aditional_title mt-5">¿Qué ofrecemos adicionalmente?</h2>
+                            <h2 className="aditional_title mt-5">¿Qué ofrecemos?</h2>
                         </div>
                         <div className="row aditional_row">
                             <div className="col-5 additional_content_box  ">
@@ -282,7 +258,7 @@ const Home = () => {
                         </div>
                         <div className="row aditional_row ">
                             <div className="col-5 additional_content_box ">
-                                <h3 className="mt-3 aditional_subtitle">Agendá<br /> tus clases</h3>
+                                <h3 className="mt-3 aditional_subtitle">Agenda<br /> de clases</h3>
                                 <p className="mt-3 aditional_text">
                                     Acordaremos las bases y horarios de trabajo para desenvolverte en ésta capacitación. No dejes que tu música se quede a medias. Reservá tu clase y empieza a mezclar como un profesional.
                                 </p>
@@ -303,6 +279,74 @@ const Home = () => {
 
                 </div>
 
+
+                <div className="row know_more_container m-0 " ref={knowMoreRef}>
+                    <div className="col-12 col-sm-6 computer_container">
+                        <img src={compactera} className="computer_img" alt="Curso de DJ online con práctica en club en Barcelona" />
+                    </div>
+                    <div className="col-12 col-sm-6 about_text">
+                        <p className="about"><strong>Si alguna vez soñaste con convertirte en Dj o productor musical y pinchar tus pistas en los
+                            escenarios mas grandes del mundo, ¡estas en el lugar adecuado!</strong>
+                        </p>
+                        <p className="about">
+                            Imagina una pintura en la que cada color tiene su espacio, su intensidad y su matiz perfecto. <strong>La mezcla musical</strong> es exactamente eso, pero con sonidos. Es el arte de equilibrar emociones, darle profundidad a los susurros y presencia a los gritos, creando una atmósfera donde cada elemento respira en armonía, y puede inclusive hacerte vibrar con ella entonces.
+                        </p>
+                        <p className="about">
+                            La producción musical es un arte emocionante y creativo que te permite dar vida a tus
+                            ideas sonoras. ¿Y que mejor manera de empezar que con <strong>Ableton Live</strong>, una de las plataformas mas potentes y
+                            versatiles a del mundo para la creacion musical?
+                        </p>
+                        <a href="https://wa.me/34674789724?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <button type="button" className="btn btn-primary rounded-pill extra contact_aditional_btn mb-5 mt-5">¿Cómo comienzo?</button>
+
+                        </a>
+                    </div>
+                </div>
+                <div className="container-fluid expect_container m-0" ref={AditionalRef}>
+                    <div className="row justify-content-start">
+
+                        <div className="aditionalinout add1 col-12 col-lg-4 p-5 p-lg-5">
+                            <h3 className="expect_texttitle">👤 ¿Para quién es este curso?</h3>
+                            <div className="expect_text-sm mt-2">
+
+                                <p>✅ Sin experiencia previa: empezá desde cero.</p>
+                                <p>✅ DJs autodidactas: llevá tu técnica al siguiente nivel.</p>
+                                <p> ✅ Productores musicales: dominá Ableton Live.</p>
+                                <p>✅ Músicos: explorá el universo de la electrónica.</p>
+                            </div>
+                        </div>
+
+                        <div className="aditionalinout add2 col-12 col-lg-4 p-5 p-lg-5">
+                            <h3 className="expect_texttitle">🎛️ Módulo 1: Curso de DJing Presencial</h3>
+                            <div className="expect_text-sm mt-2">
+                                <p> Aprendé a mezclar como un profesional y conquistá la pista de baile:</p>
+                                <p>- Manejo completo de CDJ Pioneer y mixer profesional</p>
+                                <p>- Beatmatching, mezcla armónica y técnicas avanzadas</p>
+                                <p>- Selección musical, estructura de sets y lectura del público</p>
+                                <p >- Branding artístico, marketing y booking de fechas</p>
+                                <p> 📍 Incluye actuación final en un club icónico de Barcelona</p>
+                            </div>
+                        </div>
+
+                        <div className="aditionalinout add3 col-12 col-lg-4 p-5 p-lg-5">
+                            <h3 className="expect_texttitle">🎹 Módulo 2: Producción Musical con Ableton Live</h3>
+                            <div className="expect_text-sm mt-2">
+                                <p className=" mb-5">
+                                    Creá tu propio sonido y temas originales:
+
+                                </p>
+                                <p> - Fundamentos de Ableton y flujo creativo</p>
+                                <p>- Creación de ritmos, bajos, sintetizadores y efectos</p>
+                                <p>  - Técnicas de mezcla y mastering básico</p>
+                                <p>- Exportación para DJs, plataformas digitales y sellos</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
                 <div className="row who_container m-0" ref={WhoRef}>
                     <div className="col  who_col ">
                         <div className="row w-100 d-flex justify-content-center">

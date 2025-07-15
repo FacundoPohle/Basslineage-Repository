@@ -5,8 +5,8 @@
     margin-top: 4rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-inline: 2rem;
-    width: 40rem;
+        padding-inline: 2rem;
+    /* width: 40rem; */
     background-color: #6efaff31;
 }
 
@@ -79,9 +79,9 @@
     .whoalign{
         width: 100%;
     }
-    .whoparraf{
+    /* .whoparraf{
         width: 100%;
-    }
+    } */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
