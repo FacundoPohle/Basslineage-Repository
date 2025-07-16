@@ -327,7 +327,7 @@ const Home = () => {
                                 <p>- Beatmatching, mezcla armónica y técnicas avanzadas</p>
                                 <p>- Selección musical, estructura de sets y lectura del público</p>
                                 <p >- Branding artístico, marketing y booking de fechas</p>
-                                <p> 📍 Incluye actuación final en un club icónico de Barcelona</p>
+                                <p> <strong>📍 Incluye actuación final en un club icónico de Barcelona</strong></p>
                             </div>
                         </div>
 

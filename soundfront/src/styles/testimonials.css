@@ -65,3 +65,10 @@
   font-size: 1.3rem;
   color: #fafafa;
 }
+
+
+@media only screen and (max-width: 575px) {
+    .testimonial_quote{
+        font-size: 1rem;
+    }
+}
