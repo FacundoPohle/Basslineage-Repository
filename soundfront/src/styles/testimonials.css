@@ -55,14 +55,14 @@
 }
 
 .testimonial_stars {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white !important;
   margin-bottom: 0.3rem;
 }
 
 .testimonial_quote {
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #fafafa;
 }
 
@@ -72,3 +72,11 @@
         font-size: 1rem;
     }
 }
+
+
+/* @media only screen and (min-width: 1000px) {
+    .testimonial_stars{
+          font-size: 0rem;
+
+    }
+} */

@@ -12,15 +12,17 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/material": "^6.1.4",
-    "@mui/styled-engine-sc": "^6.1.4",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "@mui/styled-engine-sc": "^6.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
     "react-router-dom": "^6.18.0",
     "styled-component": "^2.8.0",
+    "styled-components": "^6.1.19",
     "sweetalert2": "^11.17.2"
   },
   "devDependencies": {

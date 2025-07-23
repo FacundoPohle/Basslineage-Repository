@@ -1,13 +1,25 @@
 .whoalign{
-    width: 35rem;
+    width: 20rem;
 }
+
+.whodiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
 .whoparraf{
     margin-top: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
         padding-inline: 2rem;
-    /* width: 40rem; */
+    width: 100%;
     background-color: #6efaff31;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .aa_title::after{
@@ -57,6 +69,8 @@
         
     }
     .who_text{
+        text-align: center;
+
         font-size: 1.2rem;
         padding: 0;
         margin: 0;
@@ -103,7 +117,7 @@
     }
     .who_text{
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .who_container{
         background-color: #05051b;
@@ -119,22 +133,42 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+   .whodivorder{
+       display: flex;
+       flex-direction: column;
+    gap: 4rem;
+}
+}
 @media only screen and (min-width: 768px) {
     .who_container{
         background-color: #05051b;
         height: auto;
         padding-bottom: 3rem;
     }
+
+    .whodivorder{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
    
     
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
+       .who_text{
+        text-align: center;
+        font-size: 1.2rem;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
+@media only screen and (min-width: 1600px) {
+    .who_text{
+        text-align: center;
+        font-size: 1.6rem;
+    }
 }

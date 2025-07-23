@@ -10,7 +10,12 @@ import "../styles/aditional.css";
 import "../styles/who.css";
 import "../styles/examples.css";
 import "../styles/contact.css";
-import compactera from "../img/compactera.png"
+import compactera from "../img/partusa.jpeg"
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import LocationPinIcon from '@mui/icons-material/LocationPin';
+import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+import PeopleIcon from '@mui/icons-material/People';
+import { pink } from '@mui/material/colors';
 import djtocando from "../img/compac.png"
 import logo from "../img/logo.png";
 
@@ -59,7 +64,7 @@ const Home = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    entry.target.querySelector('.computer_img').classList.add('show');
+                    entry.target.querySelector('.compac_container_img').classList.add('show');
                     entry.target.querySelector('.about_text').classList.add('show');
                 }
             },
@@ -179,7 +184,6 @@ const Home = () => {
                         <button type="button" className="btn btn-primary rounded-pill contact_btn" onClick={() => { toRef("contact") }}>Reservá tu lugar !</button>
 
                         <div className="know_more">
-                            <h4 className="know ">¿Queres saber mas?</h4>
                             <div className="arrow_div  mt-3 p-2" onClick={() => { toRef("expect") }}>
                                 <i className="fa-solid fa-angle-down fa-2xl arrow" ></i>
                             </div>
@@ -199,9 +203,7 @@ const Home = () => {
 
 
                 <div className="banner_boxx" ref={ExpectRef} >
-                    <div className="compac_container">
-                        <img src={djtocando} className="compac_container_img" alt="consola" />
-                    </div>
+
                     <div className=" pt-5 expect_col">
                         <h2 className="expect_title">¿Qué podés esperar de estudiar con nosotros?</h2>
 
@@ -281,8 +283,8 @@ const Home = () => {
 
 
                 <div className="row know_more_container m-0 " ref={knowMoreRef}>
-                    <div className="col-12 col-sm-6 computer_container">
-                        <img src={compactera} className="computer_img" alt="Curso de DJ online con práctica en club en Barcelona" />
+                    <div className="col-12 col-sm-6 compac_container">
+                        <img src={compactera} className="compac_container_img" alt="Curso de DJ online con práctica en club en Barcelona" />
                     </div>
                     <div className="col-12 col-sm-6 about_text">
                         <p className="about"><strong>Si alguna vez soñaste con convertirte en Dj o productor musical y pinchar tus pistas en los
@@ -309,18 +311,18 @@ const Home = () => {
                     <div className="row justify-content-start">
 
                         <div className="aditionalinout add1 col-12 col-lg-4 p-5 p-lg-5">
-                            <h3 className="expect_texttitle">👤 ¿Para quién es este curso?</h3>
+                            <h3 className="expect_texttitle"> ¿Para quién es este curso?</h3>
                             <div className="expect_text-sm mt-2">
 
-                                <p>✅ Sin experiencia previa: empezá desde cero.</p>
-                                <p>✅ DJs autodidactas: llevá tu técnica al siguiente nivel.</p>
-                                <p> ✅ Productores musicales: dominá Ableton Live.</p>
-                                <p>✅ Músicos: explorá el universo de la electrónica.</p>
+                                <p> Sin experiencia previa: empezá desde cero.</p>
+                                <p> DJs autodidactas: llevá tu técnica al siguiente nivel.</p>
+                                <p>  Productores musicales: dominá Ableton Live.</p>
+                                <p> Músicos: explorá el universo de la electrónica.</p>
                             </div>
                         </div>
 
                         <div className="aditionalinout add2 col-12 col-lg-4 p-5 p-lg-5">
-                            <h3 className="expect_texttitle">🎛️ Módulo 1: Curso de DJing Presencial</h3>
+                            <h3 className="expect_texttitle"> Módulo 1: Curso de DJing Presencial</h3>
                             <div className="expect_text-sm mt-2">
                                 <p> Aprendé a mezclar como un profesional y conquistá la pista de baile:</p>
                                 <p>- Manejo completo de CDJ Pioneer y mixer profesional</p>
@@ -332,7 +334,7 @@ const Home = () => {
                         </div>
 
                         <div className="aditionalinout add3 col-12 col-lg-4 p-5 p-lg-5">
-                            <h3 className="expect_texttitle">🎹 Módulo 2: Producción Musical con Ableton Live</h3>
+                            <h3 className="expect_texttitle"> Módulo 2: Producción Musical con Ableton Live</h3>
                             <div className="expect_text-sm mt-2">
                                 <p className=" mb-5">
                                     Creá tu propio sonido y temas originales:
@@ -351,7 +353,7 @@ const Home = () => {
                     <div className="col  who_col ">
                         <div className="row w-100 d-flex justify-content-center">
                             <h2 className="aa_title mt-5">¿Quién puede aprender con nosotros?</h2>
-                            <h2 className=" who_title">¡Todos pueden!</h2>
+                            <h3 className=" who_title">¡Todos pueden!</h3>
                         </div>
                         <div className="row who_first_row ">
                             <p className="who_text">
@@ -367,16 +369,37 @@ const Home = () => {
                                 llevar tus sueños musicales mas allá de lo que alguna vez imaginaste.
                             </p>
                         </div>
-
                         <div className="whoparraf mt-4">
-                            <h3 className="expect_texttitle pb-3 mb-3">🕓 Detalles del Curso</h3>
-                            <p className="who_text whoalign text-start">
-                                📅 Duración: 4 meses<br />
-                                📍 Ubicación: Barcelona (presencial)<br />
-                                ⏰ Horario: Flexible, adaptado al estudiante<br />
-                                👥 Grupos reducidos – plazas limitadas
-                            </p>
+                            <div className="whodivorder">
+                                <div className="whodiv">
+                                    <CalendarMonthIcon sx={{ fontSize: 90, color: pink[500] }}/>
+                                    <p className="who_text whoalign">
+                                        Duración: 4 meses
+                                    </p>
+                                </div>
+                                <div className="whodiv">
+                                    <LocationPinIcon sx={{ fontSize: 90, color: pink[500]}}/>
+                                    <p className="who_text whoalign">
+                                        Ubicación: Barcelona (presencial)
+                                    </p>
+                                </div>
+                                <div className="whodiv">
+                                    <AccessTimeFilledIcon sx={{ fontSize: 90, color: pink[500]}}/>
+                                    <p className="who_text whoalign">
+                                        Horario: Flexible, adaptado al estudiante
+                                    </p>
+                                </div>
+                                <div className="whodiv">
+                                    <PeopleIcon sx={{ fontSize: 90, color: pink[500]}}/>
+                                    <p className="who_text whoalign">
+                                        Grupos reducidos – plazas limitadas
+                                    </p>
+                                </div>
+              
+                            </div>
+
                         </div>
+
 
 
                     </div>
@@ -406,9 +429,9 @@ const Home = () => {
                                 Escuchá los ejemplos
                             </button>
                         </div>
-                            <h3 className="join_text">
-                                ¡Únete a nosotros y prepárate para transformar tus sueños musicales en realidad!
-                            </h3>
+                        <h3 className="join_text">
+                            ¡Únete a nosotros y prepárate para transformar tus sueños musicales en realidad!
+                        </h3>
                     </div>
                 </div>
                 <Testimonials />

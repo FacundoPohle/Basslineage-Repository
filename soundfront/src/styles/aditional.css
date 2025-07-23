@@ -26,11 +26,11 @@
 } */
 
 .add1 {
-    background-color: #05051baa;
+    background-color: #d10359;
 }
 
 .add2 {
-    background-color: #d10359;
+    background-color: #05051b;
 }
 
 .add3 {
@@ -217,19 +217,16 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .aditional_text {
+ .aditional_text {
 
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .aditional_text {
-
-        font-size: 1.4rem;
-    }
-
+   
     .aditional_buton_row {
         width: 30%;
         margin-bottom: 2rem;
@@ -250,6 +247,12 @@
         width: 23%;
 
     }
+
+        .aditional_text {
+
+        font-size: 1rem;
+    }
+
 
 
 }
