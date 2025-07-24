@@ -15,6 +15,17 @@
         
 }
 
+
+.examples-container {
+  position: relative;
+  background-image: url("../img/compac.png");
+  background-size: cover;
+  background-position: 50% 20%;
+  min-height: 90vh;
+  /* z-index: 0; */
+}
+
+
 .exampless{
  margin-bottom: 2rem;
  padding-top: 4rem;
@@ -22,7 +33,7 @@
 
 .examplesss{
     background-color: rgba(5, 5, 27, 0.7) ;
-    /* margin-top: 1rem; */
+    margin-inline: 1.5rem;
     margin-bottom: 1rem;
     width: 60rem;
     /* height: 8rem; */
@@ -122,6 +133,8 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
+
+
 
     .join_text{
         margin-top: 2rem;

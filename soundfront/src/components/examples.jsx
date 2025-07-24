@@ -1,22 +1,31 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import playIcon from "../assets/play.svg";
 import pauseIcon from "../assets/pause.svg";
 
-const AudioPlayer = ({ src, title, name, sello }) => {
+const AudioPlayer = ({ id, src, title, name, sello, currentAudioId, setCurrentAudioId }) => {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
+  const isActive = currentAudioId === id;
+
+  // Efecto para pausar si deja de ser el activo
+  useEffect(() => {
+    if (!isActive && audioRef.current) {
+      audioRef.current.pause();
+    }
+  }, [isActive]);
+
   const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
+    if (!audioRef.current) return;
+
+    if (isActive) {
+      audioRef.current.pause();
+      setCurrentAudioId(null);
+    } else {
+      audioRef.current.play();
+      setCurrentAudioId(id);
     }
   };
 
@@ -48,11 +57,10 @@ const AudioPlayer = ({ src, title, name, sello }) => {
       <div className="d-flex justify-content-center">
         <div className="examplesss">
           <div className="d-flex flex-row p-3 color-play">
-            {/* Contenedor del icono de play/pause */}
             <div className="p-3">
               <img
-                src={isPlaying ? pauseIcon : playIcon}
-                alt="Curso de DJ online con práctica en club en Barcelona"
+                src={isActive ? pauseIcon : playIcon}
+                alt="Play"
                 width={70}
                 height={70}
                 style={{ cursor: "pointer", filter: "invert(1)" }}
@@ -60,7 +68,6 @@ const AudioPlayer = ({ src, title, name, sello }) => {
               />
             </div>
 
-            {/* Contenedor de texto y barra de progreso */}
             <div className="flex-col descrip w-100">
               <div className="know">{title}</div>
               <div className="d-flex flex-row">
@@ -68,7 +75,6 @@ const AudioPlayer = ({ src, title, name, sello }) => {
                 <div className="ps-2 bordersello">{sello}</div>
               </div>
 
-              {/* Barra de progreso debajo del nombre y sello */}
               <div className="progress-container">
                 <input
                   type="range"
@@ -77,11 +83,8 @@ const AudioPlayer = ({ src, title, name, sello }) => {
                   value={progress}
                   onChange={handleSeek}
                   className="progress-bar"
-                  style={{
-                    "--progress": `${progress}%`
-                  }}
+                  style={{ "--progress": `${progress}%` }}
                 />
-
                 <div className="spanspace">
                   <span className="time-left">{formatTime(currentTime)}</span>
                   <span className="time-right">{formatTime(duration - currentTime)}</span>
@@ -96,7 +99,7 @@ const AudioPlayer = ({ src, title, name, sello }) => {
         ref={audioRef}
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleTimeUpdate}
-        onEnded={() => setIsPlaying(false)}
+        onEnded={() => setCurrentAudioId(null)}
       >
         <source src={src} type="audio/mpeg" />
         Tu navegador no soporta el elemento de audio.
@@ -106,11 +109,12 @@ const AudioPlayer = ({ src, title, name, sello }) => {
 };
 
 const ExamplesCards = () => {
+  const [currentAudioId, setCurrentAudioId] = useState(null);
+
   const songs = [
-    { src: "/LUCY-V3.mp3", title: "V3", name:"LUCY", sello:"Unrealesed"},
-    { src: "/Daphna-22.mp3", title: "22", name:"Daphna", sello:"One Of Those Days" },
-    // { src: "/Firebass-JumpIn.wav", title: "Jump In (Original Mix)", name:"Firebass", sello:"My Planet Record" },
-    { src: "/venice.mp3", title: "Someone like this", name:"Venice", sello:"Unreleased" }
+    { src: "/LUCY-V3.mp3", title: "V3", name: "LUCY", sello: "Unreleased" },
+    { src: "/Daphna-22.mp3", title: "22", name: "Daphna", sello: "One Of Those Days" },
+    { src: "/venice.mp3", title: "Someone like this", name: "Venice", sello: "Unreleased" }
   ];
 
   return (
@@ -121,11 +125,19 @@ const ExamplesCards = () => {
         </div>
       </div>
       {songs.map((song, index) => (
-        <AudioPlayer key={index} src={song.src} name={song.name} title={song.title} sello={song.sello}/>
+        <AudioPlayer
+          key={index}
+          id={index}
+          src={song.src}
+          name={song.name}
+          title={song.title}
+          sello={song.sello}
+          currentAudioId={currentAudioId}
+          setCurrentAudioId={setCurrentAudioId}
+        />
       ))}
     </div>
   );
 };
 
 export default ExamplesCards;
-

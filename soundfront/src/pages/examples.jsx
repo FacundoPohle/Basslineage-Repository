@@ -19,7 +19,7 @@ const Examples = () => {
 
     return (<>
         <div className="container-fluid m-0 p-0">
-            <div className="home-container m-0">
+            <div className="examples-container m-0">
             <Navbar toRef={handleToRef}/>
             <ExamplesCards/>
             </div>

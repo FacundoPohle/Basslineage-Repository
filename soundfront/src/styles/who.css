@@ -2,6 +2,21 @@
     width: 20rem;
 }
 
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+  100% { transform: translateY(0); }
+}
+
+.who_icon {
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+
+
 .whodiv{
     display: flex;
     flex-direction: column;

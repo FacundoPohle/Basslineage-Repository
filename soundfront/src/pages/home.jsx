@@ -68,7 +68,7 @@ const Home = () => {
                     entry.target.querySelector('.about_text').classList.add('show');
                 }
             },
-            { threshold: 0.2 } // Ajusta este valor según cuándo quieras que la animación se dispare
+            { threshold: 0.5 } // Ajusta este valor según cuándo quieras que la animación se dispare
         );
 
         if (knowMoreRef.current) {
@@ -90,11 +90,11 @@ const Home = () => {
                     boxes.forEach((box, index) => {
                         setTimeout(() => {
                             box.classList.add('show');
-                        }, index * 300); // Ajusta el tiempo para que las animaciones se desfasen
+                        }, index * 500); // Ajusta el tiempo para que las animaciones se desfasen
                     });
                 }
             },
-            { threshold: 0.1 } // Ajusta el umbral según necesites
+            { threshold: 0.4 } // Ajusta el umbral según necesites
         );
 
         if (AdditionalRef.current) {
@@ -242,7 +242,7 @@ const Home = () => {
                             <h2 className="aditional_title mt-5">¿Qué ofrecemos?</h2>
                         </div>
                         <div className="row aditional_row">
-                            <div className="col-5 additional_content_box  ">
+                            <div className="col-5 additional_content_box who_icon">
                                 <h3 className="mt-3 aditional_subtitle">Samples<br /> exclusivos</h3>
                                 <p className="mt-3 aditional_text">
                                     Al inscribirte, recibirás una colección exclusiva de samples seleccionados cuidadosamente para inspirarte
@@ -250,7 +250,7 @@ const Home = () => {
                                     producciones musicales.
                                 </p>
                             </div>
-                            <div className="col-5 additional_content_box ">
+                            <div className="col-5 additional_content_box who_icon delay-1">
                                 <h3 className="mt-3 aditional_subtitle">Aprendizaje<br /> rapido</h3>
                                 <p className="mt-3 aditional_text">
                                     En tan sólo 4 meses, te brindaremos las herramientas básicas de mezcla con CDJ. Nuestro enfoque
@@ -259,13 +259,13 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="row aditional_row ">
-                            <div className="col-5 additional_content_box ">
+                            <div className="col-5 additional_content_box who_icon delay-1">
                                 <h3 className="mt-3 aditional_subtitle">Agenda<br /> de clases</h3>
                                 <p className="mt-3 aditional_text">
                                     Acordaremos las bases y horarios de trabajo para desenvolverte en ésta capacitación. No dejes que tu música se quede a medias. Reservá tu clase y empieza a mezclar como un profesional.
                                 </p>
                             </div>
-                            <div className="col-5 additional_content_box ">
+                            <div className="col-5 additional_content_box who_icon">
                                 <h3 className="mt-3 aditional_subtitle">Variedad de <br /> opciones</h3>
                                 <p className="mt-3 aditional_text">
                                     Si prefieres explorar por tu cuenta primero, también ofrecemos acceso a una variedad de cursos pregrabados de
@@ -372,25 +372,25 @@ const Home = () => {
                         <div className="whoparraf mt-4">
                             <div className="whodivorder">
                                 <div className="whodiv">
-                                    <CalendarMonthIcon sx={{ fontSize: 90, color: pink[500] }}/>
+                                    <CalendarMonthIcon className="who_icon " sx={{ fontSize: 90, color: pink[500] }}/>
                                     <p className="who_text whoalign">
                                         Duración: 4 meses
                                     </p>
                                 </div>
                                 <div className="whodiv">
-                                    <LocationPinIcon sx={{ fontSize: 90, color: pink[500]}}/>
+                                    <LocationPinIcon className="who_icon delay-1" sx={{ fontSize: 90, color: pink[500]}}/>
                                     <p className="who_text whoalign">
                                         Ubicación: Barcelona (presencial)
                                     </p>
                                 </div>
                                 <div className="whodiv">
-                                    <AccessTimeFilledIcon sx={{ fontSize: 90, color: pink[500]}}/>
+                                    <AccessTimeFilledIcon className="who_icon " sx={{ fontSize: 90, color: pink[500]}}/>
                                     <p className="who_text whoalign">
                                         Horario: Flexible, adaptado al estudiante
                                     </p>
                                 </div>
                                 <div className="whodiv">
-                                    <PeopleIcon sx={{ fontSize: 90, color: pink[500]}}/>
+                                    <PeopleIcon className="who_icon delay-1" sx={{ fontSize: 90, color: pink[500]}}/>
                                     <p className="who_text whoalign">
                                         Grupos reducidos – plazas limitadas
                                     </p>
