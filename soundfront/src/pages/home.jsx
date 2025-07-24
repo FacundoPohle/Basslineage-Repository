@@ -68,7 +68,7 @@ const Home = () => {
                     entry.target.querySelector('.about_text').classList.add('show');
                 }
             },
-            { threshold: 0.5 } // Ajusta este valor según cuándo quieras que la animación se dispare
+            { threshold: 0.3 } // Ajusta este valor según cuándo quieras que la animación se dispare
         );
 
         if (knowMoreRef.current) {
