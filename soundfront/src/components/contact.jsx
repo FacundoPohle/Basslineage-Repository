@@ -49,7 +49,7 @@ const ContactForm = forwardRef((props, ref) => {
 
     return (
         <div>
-            <div className="row contact_container m-0" ref={ref}>
+            <div id={props.id} className="row contact_container m-0" ref={ref}>
             <div className="col-5 col-md-6 contact_form_col">
             <h2 className="contact_title">Contáctanos</h2>
                 <div className="contact_form p-md-5 p-4">

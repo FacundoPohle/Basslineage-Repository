@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Testimonials from "../components/testimonials";
@@ -16,49 +16,94 @@ import LocationPinIcon from '@mui/icons-material/LocationPin';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import PeopleIcon from '@mui/icons-material/People';
 import { pink } from '@mui/material/colors';
-import djtocando from "../img/compac.png"
-import logo from "../img/logo.png";
+
 
 
 
 const Home = () => {
 
+    const HomeRef = useRef(null)
     const knowMoreRef = useRef(null)
     const ExpectRef = useRef(null)
     const AdditionalRef = useRef(null)
     const AditionalRef = useRef(null)
     const WhoRef = useRef(null)
+    const WhyRef = useRef(null)
     const ExamplesRef = useRef(null)
     const ContactRef = useRef(null)
+    const [activeSection, setActiveSection] = useState("");
+const lastManualScroll = useRef(0);
+
+useEffect(() => {
+    const now = Date.now();
+    if (now - lastManualScroll.current < 1000) return; // Evita conflicto si fue scroll manual reciente
+
+    const sectionRefMap = {
+        home: HomeRef,
+        expect: ExpectRef,
+        additional: AdditionalRef,
+        who: WhoRef,
+        example: ExamplesRef,
+        contact: ContactRef,
+        know_more: knowMoreRef,
+        why: WhyRef,
+    };
+
+    const targetRef = sectionRefMap[activeSection];
+    if (targetRef?.current) {
+        targetRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+}, [activeSection]);
+
+useEffect(() => {
+    const handleScroll = () => {
+        lastManualScroll.current = Date.now();
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
 
 
     const toRef = (section) => {
-        let ref
+        let ref;
         switch (section) {
-            case "expect":
-                ref = ExpectRef
-                break
-            case 'know_more':
-                ref = knowMoreRef
-                break;
-            case "additional":
-                ref = AdditionalRef
-                break;
-            case 'who':
-                ref = WhoRef
-                break;
-            case "example":
-                ref = ExamplesRef
-                break;
-            case "contact":
-                ref = ContactRef
-                break
-        }
 
-        if (ref && ref.current) {
-            ref.current.scrollIntoView({ behavior: 'smooth' });
+            case "home": ref = HomeRef; break;
+            case "expect": ref = ExpectRef; break;
+            case "know_more": ref = knowMoreRef; break;
+            case "additional": ref = AdditionalRef; break;
+            case "who": ref = WhoRef; break;
+            case "why": ref = WhyRef; break;
+            case "example": ref = ExamplesRef; break;
+            case "contact": ref = ContactRef; break;
         }
+        if (ref?.current) ref.current.scrollIntoView({ behavior: 'smooth' });
     };
+
+    useEffect(() => {
+  const sections = ["home", "why", "expect", "additional", "who", "example", "contact"];
+  const options = { threshold: 0.5 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  }, options);
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+
+  return () => observer.disconnect();
+}, [setActiveSection]);
+
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -145,8 +190,8 @@ const Home = () => {
     return (
         <>
             <div className="container-fluid m-0 p-0">
-                <div className="home-container m-0">
-                    <Navbar toRef={toRef} />
+                <div id="home" ref={HomeRef} className="home-container m-0">
+                    <Navbar toRef={toRef} activeSection={activeSection} setActiveSection={setActiveSection}/>
                     <div className="home_content_container">
                         <div class="testimonial_intro">
                             <div class="testimonial_stars">★ ★ ★ ★ ★</div>
@@ -202,7 +247,7 @@ const Home = () => {
                 </a>
 
 
-                <div className="banner_boxx" ref={ExpectRef} >
+                <div className="banner_boxx" id="expect" ref={ExpectRef} >
 
                     <div className=" pt-5 expect_col">
                         <h2 className="expect_title">¿Qué podés esperar de estudiar con nosotros?</h2>
@@ -236,7 +281,7 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
-                <div className="row additional_container m-0" ref={AdditionalRef} >
+                <div className="row additional_container m-0" id="additional" ref={AdditionalRef} >
                     <div className="col  aditional_col">
                         <div className="row w-100 d-flex justify-content-center">
                             <h2 className="aditional_title mt-5">¿Qué ofrecemos?</h2>
@@ -349,7 +394,7 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div className="row who_container m-0" ref={WhoRef}>
+                <div className="row who_container m-0" id="who" ref={WhoRef}>
                     <div className="col  who_col ">
                         <div className="row w-100 d-flex justify-content-center">
                             <h2 className="aa_title mt-5">¿Quién puede aprender con nosotros?</h2>
@@ -405,7 +450,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className="row examples_container m-0" ref={ExamplesRef}>
+                <div className="row examples_container m-0" id="why" ref={WhyRef}>
                     <div className="col examples_col">
                         <div className="row w-100 d-flex justify-content-center">
                             <h2 className=" example_title mt-5">¿Por qué Ableton Live?</h2>
@@ -420,7 +465,7 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <div className="row contact_examples_row">
+                        <div id="example" ref={ExamplesRef} className="row contact_examples_row">
                             <button
                                 type="button"
                                 className="btn btn-primary rounded-pill contact_examples_btn"
@@ -436,7 +481,7 @@ const Home = () => {
                 </div>
                 <Testimonials />
 
-                <ContactForm ref={ContactRef} />
+                <ContactForm id="contact" ref={ContactRef} />
             </div>
             <Footer />
 

@@ -121,12 +121,18 @@ p {
 }
 
 .menu_container {
-  background-color: rgba(5, 5, 27, 0.7);
+  background-color: #000;
 
   width: 60rem;
   /* height: 8rem; */
 
 }
+
+.active-link {
+  color: #6efbff !important;
+  font-weight: bold;
+}
+
 
 .nav_title {
   color: #6efbff;
