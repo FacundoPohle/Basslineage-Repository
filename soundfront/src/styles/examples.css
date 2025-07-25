@@ -21,13 +21,12 @@
   background-image: url("../img/compac.png");
   background-size: cover;
   background-position: 50% 20%;
-  min-height: 100vh;
+  height: 100vh;
   /* z-index: 0; */
 }
 
 
 .exampless{
- margin-bottom: 2rem;
  padding-top: 4rem;
 }
 
