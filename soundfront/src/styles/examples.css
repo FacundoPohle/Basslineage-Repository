@@ -44,7 +44,9 @@
     align-items: center;
     padding: 0 !important;
 }
-
+.contact_examples_btn{
+    border: none !important;
+}
 .contact_examples_btn, .contact_examples_btn:after, .contact_examples_btn:hover{
     background-color: #d10359;
 }

@@ -81,7 +81,9 @@
     color: #6efbff;
 }
 
-
+.contact_aditional_btn{
+    border: none !important;
+}
 .contact_aditional_btn,
 .contact_aditional_btn:after,
 .contact_aditional_btn:hover {
