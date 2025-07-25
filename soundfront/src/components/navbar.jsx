@@ -44,12 +44,19 @@ const Navbar = ({ toRef, activeSection, setActiveSection }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const handleClick = (e, section) => {
-        const myOffcanvas = document.getElementById("offcanvasDarkNavbar");
-        const bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
-        bsOffcanvas.hide();
+   const handleClick = (e, section) => {
+    e.preventDefault();
+
+    const myOffcanvas = document.getElementById("offcanvasDarkNavbar");
+    const bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+    bsOffcanvas.hide();
+
+    // ⏳ Espera a que el menú se cierre antes de scrollear
+    setTimeout(() => {
         toRef(section);
-    };
+    }, 300); // 300 ms suele ser suficiente
+};
+
 
     const handleClickHome = () => navigate("/");
     const handleClickExamples = () => navigate("/examples");

@@ -77,14 +77,13 @@ useEffect(() => {
             case "additional": ref = AdditionalRef; break;
             case "who": ref = WhoRef; break;
             case "why": ref = WhyRef; break;
-            case "example": ref = ExamplesRef; break;
             case "contact": ref = ContactRef; break;
         }
         if (ref?.current) ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     useEffect(() => {
-  const sections = ["home", "why", "expect", "additional", "who", "example", "contact"];
+  const sections = ["home", "why", "expect", "additional", "who", "contact"];
   const options = { threshold: 0.5 };
 
   const observer = new IntersectionObserver((entries) => {
@@ -465,7 +464,7 @@ useEffect(() => {
                             </p>
                         </div>
 
-                        <div id="example" ref={ExamplesRef} className="row contact_examples_row">
+                        <div className="row contact_examples_row">
                             <button
                                 type="button"
                                 className="btn btn-primary rounded-pill contact_examples_btn"
