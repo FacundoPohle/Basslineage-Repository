@@ -21,7 +21,7 @@
   background-image: url("../img/compac.png");
   background-size: cover;
   background-position: 50% 20%;
-  height: 100vh;
+  min-height: 100vh;
   /* z-index: 0; */
 }
 
