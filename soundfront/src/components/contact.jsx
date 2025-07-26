@@ -12,6 +12,8 @@ const ContactForm = forwardRef((props, ref) => {
         mensaje: "",
     });
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+
 
 
     const handleChange = (e) => {
@@ -23,6 +25,7 @@ const ContactForm = forwardRef((props, ref) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         emailjs
             .send(
@@ -39,6 +42,7 @@ const ContactForm = forwardRef((props, ref) => {
                         icon: "success",
                     });
                     setForm({ nombre: "", email: "", telefono: "", mensaje: "" });
+                    setLoading(false);
 
                     setTimeout(() => {
                         navigate("/thanks");
@@ -51,6 +55,8 @@ const ContactForm = forwardRef((props, ref) => {
                         text: "Algo salió mal.",
                         footer: '<a href="https://wa.me/34674789724?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!" target="_blank">Contactar por WhatsApp</a>'
                     });
+                    setLoading(false);
+
                 }
             );
     };
@@ -107,8 +113,12 @@ const ContactForm = forwardRef((props, ref) => {
                                 ></textarea>
                             </div>
                             <div className="col-auto submit_col">
-                                <button type="submit" className="btn btn-primary mb-3 rounded-pill submit_contact">
-                                    Enviar
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary mb-3 rounded-pill submit_contact"
+                                    disabled={loading}
+                                >
+                                    {loading ? "Enviando..." : "Enviar"}
                                 </button>
                             </div>
                         </form>
