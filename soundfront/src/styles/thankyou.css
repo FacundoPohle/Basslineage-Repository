@@ -1,0 +1,32 @@
+.thanks-container {
+  position: relative;
+  background-image: url("../img/thank.png");
+  background-size: cover;
+  background-position: 50% 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+@media only screen and (max-width: 592px){
+      .thankex{
+        position: relative;
+        margin-bottom: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 593px){
+      .thankex {
+        position: relative;
+        margin-bottom: 5rem;
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}

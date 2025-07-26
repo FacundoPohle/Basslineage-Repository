@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import "../styles/home.css";
@@ -9,8 +8,6 @@ import "../styles/who.css";
 import "../styles/examples.css";
 import "../styles/contact.css";
 import ExamplesCards from "../components/examples"
-import banner from "../img/banner.jpg"
-import logo from "../img/logo.png"
 
 
 const Examples = () => {

@@ -1,6 +1,8 @@
 import { useState, forwardRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
 
 const ContactForm = forwardRef((props, ref) => {
     const [form, setForm] = useState({
@@ -9,6 +11,8 @@ const ContactForm = forwardRef((props, ref) => {
         telefono: "",
         mensaje: "",
     });
+    const navigate = useNavigate();
+
 
     const handleChange = (e) => {
         setForm({
@@ -35,6 +39,10 @@ const ContactForm = forwardRef((props, ref) => {
                         icon: "success",
                     });
                     setForm({ nombre: "", email: "", telefono: "", mensaje: "" });
+
+                    setTimeout(() => {
+                        navigate("/thanks");
+                    }, 1500);
                 },
                 (error) => {
                     Swal.fire({
@@ -50,72 +58,72 @@ const ContactForm = forwardRef((props, ref) => {
     return (
         <div>
             <div id={props.id} className="row contact_container m-0" ref={ref}>
-            <div className="col-5 col-md-6 contact_form_col">
-            <h2 className="contact_title">Contáctanos</h2>
-                <div className="contact_form p-md-5 p-4">
-                    <form onSubmit={handleSubmit}>
-                        <div className="mb-3">
-                            <input
-                                type="text"
-                                className="form-control contact_input rounded-pill"
-                                name="nombre"
-                                value={form.nombre}
-                                onChange={handleChange}
-                                placeholder="Nombre y Apellido"
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <input
-                                type="email"
-                                className="form-control contact_input rounded-pill"
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder="Email"
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <input
-                                type="number"
-                                className="form-control contact_input rounded-pill"
-                                name="telefono"
-                                value={form.telefono}
-                                onChange={handleChange}
-                                placeholder="Teléfono"
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <textarea
-                                className="form-control contact_input contact_message"
-                                name="mensaje"
-                                value={form.mensaje}
-                                onChange={handleChange}
-                                rows="3"
-                                placeholder="Mensaje"
-                                required
-                            ></textarea>
-                        </div>
-                        <div className="col-auto submit_col">
-                            <button type="submit" className="btn btn-primary mb-3 rounded-pill submit_contact">
-                                Enviar
-                            </button>
-                        </div>
-                    </form>
+                <div className="col-5 col-md-6 contact_form_col">
+                    <h2 className="contact_title">Contáctanos</h2>
+                    <div className="contact_form p-md-5 p-4">
+                        <form onSubmit={handleSubmit}>
+                            <div className="mb-3">
+                                <input
+                                    type="text"
+                                    className="form-control contact_input rounded-pill"
+                                    name="nombre"
+                                    value={form.nombre}
+                                    onChange={handleChange}
+                                    placeholder="Nombre y Apellido"
+                                    required
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <input
+                                    type="email"
+                                    className="form-control contact_input rounded-pill"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    placeholder="Email"
+                                    required
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <input
+                                    type="number"
+                                    className="form-control contact_input rounded-pill"
+                                    name="telefono"
+                                    value={form.telefono}
+                                    onChange={handleChange}
+                                    placeholder="Teléfono"
+                                    required
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <textarea
+                                    className="form-control contact_input contact_message"
+                                    name="mensaje"
+                                    value={form.mensaje}
+                                    onChange={handleChange}
+                                    rows="3"
+                                    placeholder="Mensaje"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div className="col-auto submit_col">
+                                <button type="submit" className="btn btn-primary mb-3 rounded-pill submit_contact">
+                                    Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div className="col-3 contact_info ms-lg-5">
-                
-                <ul className="contact_list">
-                    <li className="contact_item">
-                        <div className="circle me-2">
-                            <i className="fa-regular fa-envelope icon"></i>
-                        </div>
-                        <p className="contact_text">basslineageacademia@gmail.com</p>
-                    </li>
-                    {/* <li className="contact_item">
+                <div className="col-3 contact_info ms-lg-5">
+
+                    <ul className="contact_list">
+                        <li className="contact_item">
+                            <div className="circle me-2">
+                                <i className="fa-regular fa-envelope icon"></i>
+                            </div>
+                            <p className="contact_text">basslineageacademia@gmail.com</p>
+                        </li>
+                        {/* <li className="contact_item">
                         <a href="https://wa.me/34674789724?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -126,56 +134,56 @@ const ContactForm = forwardRef((props, ref) => {
                         </a>
                         <p className="contact_text">+34 674 78 97 24</p>
                     </li> */}
-                    <li className="contact_item">
-                        <a href="https://wa.me/34607817148?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="whatsapp_link">
-                            <div className="circle me-2">
-                                <i className="fa-brands fa-whatsapp icon"></i>
-                            </div>
-                        </a>
-                        <p className="contact_text">+34 607 81 71 48</p>
-                    </li>
-                    <li className="contact_item">
-                        <a href="https://wa.me/393420690210?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="whatsapp_link">
-                            <div className="circle me-2">
-                                <i className="fa-brands fa-whatsapp icon"></i>
-                            </div>
-                        </a>
-                        <p className="contact_text">+39 342 06 90 210</p>
-                    </li>
-                    <li className="contact_item">
-                        <a
-                            href="https://www.google.com/maps?q=Carrer+Magalhaes+23,+Barcelona"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="whatsapp_link"
-                        >
-                            <div className="circle me-2">
-                                <i className="fa-solid fa-location-dot icon"></i>
-                            </div>
-                        </a>
+                        <li className="contact_item">
+                            <a href="https://wa.me/34607817148?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="whatsapp_link">
+                                <div className="circle me-2">
+                                    <i className="fa-brands fa-whatsapp icon"></i>
+                                </div>
+                            </a>
+                            <p className="contact_text">+34 607 81 71 48</p>
+                        </li>
+                        <li className="contact_item">
+                            <a href="https://wa.me/393420690210?text=Hola%20!%20Vengo%20de%20la%20página%20oficial%20de%20basslineage,%20quería%20hacer%20una%20consulta!"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="whatsapp_link">
+                                <div className="circle me-2">
+                                    <i className="fa-brands fa-whatsapp icon"></i>
+                                </div>
+                            </a>
+                            <p className="contact_text">+39 342 06 90 210</p>
+                        </li>
+                        <li className="contact_item">
+                            <a
+                                href="https://www.google.com/maps?q=Carrer+Magalhaes+23,+Barcelona"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="whatsapp_link"
+                            >
+                                <div className="circle me-2">
+                                    <i className="fa-solid fa-location-dot icon"></i>
+                                </div>
+                            </a>
 
-                        <p className="contact_text">Carrer Magalhaes 23</p>
-                    </li>
-                </ul>
-                <div style={{ width: "100%", maxWidth: "350px", height: "250px", marginBottom: "2rem"}}>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.3006075692863!2d2.1670136766228625!3d41.36824469820206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2da25b5782f%3A0x6cbe80c8e6fe76f1!2sC%2F%20de%20Magalh%C3%A3es%2C%2023%2C%20Sants-Montju%C3%AFc%2C%2008014%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sar!4v1716391090334!5m2!1sen!2sar"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0, borderRadius: "10px" }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                            <p className="contact_text">Carrer Magalhaes 23</p>
+                        </li>
+                    </ul>
+                    <div style={{ width: "100%", maxWidth: "350px", height: "250px", marginBottom: "2rem" }}>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.3006075692863!2d2.1670136766228625!3d41.36824469820206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2da25b5782f%3A0x6cbe80c8e6fe76f1!2sC%2F%20de%20Magalh%C3%A3es%2C%2023%2C%20Sants-Montju%C3%AFc%2C%2008014%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sar!4v1716391090334!5m2!1sen!2sar"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0, borderRadius: "10px" }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     );
 });
