@@ -95,7 +95,7 @@ const Navbar = ({ toRef, activeSection, setActiveSection }) => {
                     </div>
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 text-start ps-4">
-                            {location.pathname === "/examples" ? (
+                            {["/examples", "/thanks"].includes(location.pathname) ? (
                                 <li className="nav-item">
                                     <a
                                         className="nav-link text-light"
