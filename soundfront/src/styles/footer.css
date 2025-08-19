@@ -1,5 +1,58 @@
 
 
+.footer_link {
+  color: #6efbff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+/* Asegura alineación vertical y wrap elegante si falta espacio */
+.footer_icons_container{
+  display: flex;
+  align-items: center;      /* 🔹 alinea verticalmente íconos y link */
+  gap: 0.5rem;              /* opcional, si preferís usá ms-3 en cada li */
+  flex-wrap: wrap;          /* 🔹 si no entra, baja a la siguiente línea */
+}
+
+/* Estilo del link para que “respire” como un icono */
+.footer_link_item{
+  display: flex;
+  align-items: center;
+}
+
+.footer_link{
+  color: #6efbff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1;           /* 🔹 evita que se vea “descentrado” */
+  padding: 0.25rem 0;       /* un toque de aire */
+}
+
+.footer_link:hover{
+  text-decoration: underline;
+}
+
+/* XS y SM ya tenías centrado; esto mantiene el comportamiento */
+@media only screen and (max-width: 575px){
+  .footer_icons_container{
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 576px){
+  .footer_icons_container{
+    justify-content: center;
+  }
+}
+/* MD+: a la derecha, como ya lo tenías */
+@media only screen and (min-width: 768px){
+  .footer_icons_container{
+    justify-content: end;
+  }
+}
 
 
 /* Extra small devices (phones, 600px and down) */

@@ -1,0 +1,253 @@
+/* ====== Base ====== */
+:root{
+  --bg-dark: #05051b;
+  --bg-card: #0a0f2a;      /* un poco más claro que el fondo para contraste */
+  --text: #e9eef6;
+  --text-dim: #c0c7d1;
+  --brand: #6efbff;
+  --border: #1a2347;
+}
+
+/* Contenedor principal de la página de privacidad */
+.privacy-container{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;           /* ya trae py-5 px-4, esto complementa si lo quitás */
+  color: var(--text);
+}
+
+/* Opcional: si querés un “card” centrado */
+.privacy-container{
+  background: linear-gradient(180deg, rgba(10,15,42,.6), rgba(10,15,42,.35));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* Títulos */
+.privacy-container h1{
+  font-size: clamp(1.75rem, 2.5vw, 2.4rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--brand);
+  text-shadow: 0 0 14px rgba(110,251,255,.25);
+}
+
+.privacy-container h3{
+  font-size: clamp(1.15rem, 1.9vw, 1.35rem);
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  color: #dffbff;
+}
+
+/* Texto */
+.privacy-container p{
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.privacy-container p strong{
+  color: #ffffff;
+}
+
+/* Enlaces */
+.privacy-container a{
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(110,251,255,.5);
+  transition: all .2s ease;
+}
+
+.privacy-container a:hover,
+.privacy-container a:focus{
+  color: #b3fdff;
+  border-bottom-color: #b3fdff;
+}
+
+/* Separadores opcionales (si querés secciones más marcadas) */
+.privacy-divider{
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 1.5rem 0;
+}
+
+/* ====== Responsivo (mismos cortes que tu footer.css) ====== */
+
+/* <=575px */
+@media only screen and (max-width: 575px){
+  .privacy-container{
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+}
+
+/* >=576px */
+@media only screen and (min-width: 576px){
+  .privacy-container{
+    padding: 2.5rem 1.5rem;
+    margin: 1.25rem;
+  }
+}
+
+/* >=768px */
+@media only screen and (min-width: 768px){
+  .privacy-container{
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+  }
+}
+
+/* >=992px */
+@media only screen and (min-width: 992px){
+  .privacy-container{
+    padding: 3.5rem 2.5rem;
+  }
+}
+
+/* >=1200px */
+@media only screen and (min-width: 1200px){
+  .privacy-container{
+    padding: 4rem 3rem;
+  }
+}
+
+/* ====== Accesibilidad ====== */
+.privacy-container a:focus{
+  outline: 2px dashed var(--brand);
+  outline-offset: 2px;
+  border-bottom-style: solid;
+}
+
+/* Si tu layout general usa un fondo distinto al del footer, podés setear el body aquí: */
+body{
+  background-color: var(--bg-dark);
+}
+
+/* Si necesitás que el contenido empuje al footer hacia abajo en pantallas altas: */
+.container-fluid.m-0.p-0{
+  min-height: calc(100vh - 7rem); /* aprox. alto de tu footer en >=768px */
+}
+
+/* ===== Variables y base (coinciden con los estilos que ya usás) ===== */
+:root{
+  --bg-dark: #05051b;
+  --bg-card: #0a0f2a;
+  --text: #e9eef6;
+  --text-dim: #c0c7d1;
+  --brand: #6efbff;
+  --border: #1a2347;
+}
+
+body{
+  background-color: var(--bg-dark);
+}
+
+/* ===== Breadcrumb + Volver ===== */
+.privacy-crumbs{
+  max-width: 1120px;
+  margin: 1rem auto 0.5rem auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(10,15,42,.6);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.back-btn:hover{
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(110,251,255,.15);
+}
+.back-btn:active{
+  transform: translateY(1px);
+}
+.back-icon{
+  display: block;
+}
+
+.privacy-breadcrumb ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text-dim);
+  font-size: .95rem;
+}
+
+.privacy-breadcrumb li{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* separador “/” */
+.privacy-breadcrumb li + li::before{
+  content: "/";
+  opacity: .6;
+}
+
+.breadcrumb-link{
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(110,251,255,.5);
+}
+.breadcrumb-link:hover{
+  border-bottom-color: var(--brand);
+}
+
+.breadcrumb-current{
+  color: #dffbff;
+}
+
+/* ===== Card de contenido (opcional) ===== */
+.privacy-container{
+  max-width: 960px;
+  margin: 0 auto 2rem auto;
+  color: var(--text);
+  background: linear-gradient(180deg, rgba(10,15,42,.6), rgba(10,15,42,.35));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.privacy-container h1{
+  color: var(--brand);
+  text-shadow: 0 0 14px rgba(110,251,255,.25);
+}
+
+/* ===== Responsive (mismos cortes que tu footer) ===== */
+@media only screen and (max-width: 575px){
+  .privacy-crumbs{
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+  .back-btn{
+    padding: .45rem .8rem;
+    font-size: .95rem;
+  }
+  .privacy-container{
+    margin: 0 1rem 2rem 1rem;
+  }
+}
+@media only screen and (min-width: 576px){
+  .privacy-crumbs{
+    padding: 0 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px){
+  .privacy-crumbs{
+    padding: 0 1.5rem;
+  }
+}

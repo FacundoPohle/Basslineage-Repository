@@ -4,6 +4,7 @@ import injectContext from "./store/appContext";
 import Home from './pages/home';
 import Examples from './pages/examples';
 import Thanks from './pages/thankyou';
+import Privacy from './pages/Privacy';
 import { initGA, logPageView } from "./googleAnalytics";
 
 // 🧠 Este componente registra los cambios de ruta
@@ -33,6 +34,7 @@ function App() {
           <Route element={<Home />} path="/" />
           <Route element={<Examples />} path="/examples" />
           <Route element={<Thanks />} path="/thanks" />
+          <Route path="/privacy" element={<Privacy />} />
           <Route element={<h1>Not found!</h1>} />
         </Routes>
       </HashRouter>
