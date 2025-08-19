@@ -286,14 +286,6 @@ useEffect(() => {
                             <h2 className="aditional_title mt-5">¿Qué ofrecemos?</h2>
                         </div>
                         <div className="row aditional_row">
-                            <div className="col-5 additional_content_box who_icon">
-                                <h3 className="mt-3 aditional_subtitle">Samples<br /> exclusivos</h3>
-                                <p className="mt-3 aditional_text">
-                                    Al inscribirte, recibirás una colección exclusiva de samples seleccionados cuidadosamente para inspirarte
-                                    desde el primer dia. Estos samples te darán una base sólida para comenzar tus primeras
-                                    producciones musicales.
-                                </p>
-                            </div>
                             <div className="col-5 additional_content_box who_icon delay-1">
                                 <h3 className="mt-3 aditional_subtitle">Aprendizaje<br /> rapido</h3>
                                 <p className="mt-3 aditional_text">
@@ -301,20 +293,30 @@ useEffect(() => {
                                     práctico y personalizado te permitirá progresar rápidamente y comenzar a pinchar tus pistas favoritas de inmediato.
                                 </p>
                             </div>
-                        </div>
-                        <div className="row aditional_row ">
-                            <div className="col-5 additional_content_box who_icon delay-1">
+                              <div className="col-5 additional_content_box who_icon delay-1">
                                 <h3 className="mt-3 aditional_subtitle">Agenda<br /> de clases</h3>
                                 <p className="mt-3 aditional_text">
                                     Acordaremos las bases y horarios de trabajo para desenvolverte en ésta capacitación. No dejes que tu música se quede a medias. Reservá tu clase y empieza a mezclar como un profesional.
                                 </p>
                             </div>
+                            
+                        </div>
+                        <div className="row aditional_row ">
+                          
                             <div className="col-5 additional_content_box who_icon">
                                 <h3 className="mt-3 aditional_subtitle">Variedad de <br /> opciones</h3>
                                 <p className="mt-3 aditional_text">
                                     Si prefieres explorar por tu cuenta primero, también ofrecemos acceso a una variedad de cursos pregrabados de
                                     diferentes géneros e industrias, haciendo hincapié en todos los subgeneros de la musica electrónica. Así puedes
                                     aprender a tu propio ritmo y segun tus intereses antes de unirte a las clases en vivo.
+                                </p>
+                            </div>
+                            <div className="col-5 additional_content_box who_icon">
+                                <h3 className="mt-3 aditional_subtitle">Samples<br /> exclusivos</h3>
+                                <p className="mt-3 aditional_text">
+                                    Al inscribirte, recibirás una colección exclusiva de samples seleccionados cuidadosamente para inspirarte
+                                    desde el primer dia. Estos samples te darán una base sólida para comenzar tus primeras
+                                    producciones musicales.
                                 </p>
                             </div>
                         </div>

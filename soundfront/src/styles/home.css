@@ -40,11 +40,87 @@ a {
   transform: scale(1.1);
 }
 
-.somee {
+/* Ajustá el color de brillo acá */
+:root{
+  --glow: 110, 251, 255; /* cian */
+}
+
+/* .somee{} (solo para recordar: tu clase real es .somee) */
+
+/* .somee{} borra esta línea; uso .somee más abajo */
+
+
+/* Estilo base que ya tenías + mejoras para el efecto */
+.somee{
   background-color: #05051baa;
   width: 100%;
   padding: 2rem;
+
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+
+  /* inner glow de color, más evidente */
+  box-shadow:
+    inset 0 0 0 2px rgba(var(--glow), .65),
+    inset 0 0 28px rgba(var(--glow), .35);
+  animation: edgeGlow 2.2s ease-in-out infinite alternate;
 }
+
+/* Halo exterior grande (glow hacia afuera) */
+.somee::before{
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    0 0 60px 20px rgba(var(--glow), .55),
+    0 0 120px 40px rgba(var(--glow), .28);
+  filter: blur(6px);
+  opacity: .9;
+  animation: haloBig 2.2s ease-in-out infinite alternate;
+}
+
+/* Viñeta oscura (difumina los bordes hacia adentro) */
+.somee::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 120% at 50% 50%,
+      transparent 55%,
+      rgba(0,0,0,.45) 72%,
+      rgba(0,0,0,.75) 100%);
+  animation: vignettePulse 2.2s ease-in-out infinite alternate;
+}
+
+/* Animaciones */
+@keyframes edgeGlow{
+  from{
+    box-shadow:
+      inset 0 0 0 2px rgba(var(--glow), .55),
+      inset 0 0 18px rgba(var(--glow), .25);
+  }
+  to{
+    box-shadow:
+      inset 0 0 0 3px rgba(var(--glow), .9),
+      inset 0 0 42px rgba(var(--glow), .5);
+  }
+}
+
+@keyframes haloBig{
+  from{ filter: blur(6px);  opacity: .6; }
+  to  { filter: blur(14px); opacity: 1;  }
+}
+
+@keyframes vignettePulse{
+  from{ opacity: .55; }
+  to  { opacity: .85; }
+}
+
 
 
 /* Animación para la imagen desde la izquierda */
@@ -624,8 +700,7 @@ p {
 
 @media only screen and (min-width: 1600px) {
   .contact_btn {
-    width: 25%;
-    margin-top: 10rem;
+    width: 15%;
   }
 
   .about {

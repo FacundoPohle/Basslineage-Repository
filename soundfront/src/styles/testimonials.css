@@ -73,6 +73,14 @@
     }
 }
 
+@media only screen and (min-width:1600px) {
+    .testimonial_intro {
+        margin-top: 3rem;
+  margin-bottom: 12rem;
+
+}
+}
+
 
 /* @media only screen and (min-width: 1000px) {
     .testimonial_stars{
