@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import "../styles/privacy.css";
 
+
 const Privacy = () => {
   const navigate = useNavigate();
 
@@ -12,6 +13,12 @@ const Privacy = () => {
     if (window.history.length > 1) navigate(-1);
     else navigate("/");
   };
+  const email = "basslineageacademia@gmail.com";
+  const subject = encodeURIComponent("Consulta desde Basslineage");
+  const body = encodeURIComponent("Hola! Quisiera más información sobre el curso…");
+
+
+
 
   return (
     <>
@@ -28,7 +35,7 @@ const Privacy = () => {
           >
             {/* Ícono flecha (SVG) para no depender de libs */}
             <svg width="18" height="18" viewBox="0 0 24 24" className="back-icon" aria-hidden="true">
-              <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             Volver
           </button>
@@ -83,15 +90,25 @@ const Privacy = () => {
           <h3>¿Tienes dudas?</h3>
           <p>
             Si tienes preguntas sobre cómo manejamos tu información personal, puedes contactarnos en
-            <a href="mailto:basslineageacademia@gmail.com"> basslineageacademia@gmail.com</a>.
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`}
+              target="_blank" rel="noopener noreferrer"
+            >
+               <span className="ms-1 me-1"> basslineageacademia@gmail.com.</span>
+            </a>
             Nuestro equipo estará disponible para resolver cualquier inquietud sobre la recopilación de datos, el uso de cookies, o cómo garantizamos la seguridad de tu información.
           </p>
 
           <h3>Derechos del usuario</h3>
           <p>
             Tienes el derecho a acceder, corregir, actualizar y eliminar tus datos personales en cualquier momento.
-            Si deseas ejercer estos derechos, puedes escribirnos a
-            <a href="mailto:basslineageacademia@gmail.com"> basslineageacademia@gmail.com</a>.
+            Si deseas ejercer estos derechos, puedes 
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`}
+              target="_blank" rel="noopener noreferrer"
+            >
+              <span className="ms-1 me-1">enviarnos un mail a basslineageacademia@gmail.com.</span>
+            </a>
             Nos comprometemos a responder a tu solicitud con prontitud.
           </p>
         </div>
